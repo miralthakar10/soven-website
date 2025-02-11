@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="icon" type="images/x-icon" href="img/logo.png" />
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.slim.min.js"></script>
+    <script src="js/bootstrap.bundle2.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/678e3af47d.js" crossorigin="anonymous"></script>
+    <link href="https://db.onlinewebfonts.com/c/8f2a9d487bbbc60974cd132fc3a63862?family=Aeonik+Regular"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        body {
+            width: 100%;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: black;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #0075C5;
+            border-radius: 10px;
+        }
+
+        .read-more-btn {
+            margin-top: 20px;
+        }
+
+        .service-card {
+            height: 100%;
+            width: 300px;
+            text-align: start;
+        }
+
+        .intro {
+            font-size: 16px;
+            margin-bottom: 1.25rem;
+            font-weight: 400;
+            color: #ffffffa6;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            /* margin-left: 5px; */
+            margin-top: 15px;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            overflow-y: auto;
+            /* Enable vertical scrolling */
+            filter: drop-shadow(2px 4px 6px #0075C5);
+            height: 100%;
+            width: 100%;
+            border: 1px solid #0075C5;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #000;
+
+            color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 9999;
+        }
+
+        h2 {
+            color: #0075C5;
+            text-align: left;
+        }
+
+        .ghj {
+            color: white;
+        }
+
+        /* Styles for the overlay background */
+
+        .popup p {
+            font-size: 3vh;
+            filter: unset;
+            margin-right: 30px;
+            margin-left: 30px;
+            font-family: system-ui;
+            letter-spacing: 0.5px;
+            /* text-align: justify; */
+
+
+        }
+
+        .popup ul {
+            font-size: 3vh;
+            margin-right: 30px;
+            margin-left: 30px;
+            text-align: justify;
+
+        }
+
+        .popup h2 {
+            font-size: 5.5vh;
+            text-align: center;
+            margin-bottom: 40px;
+            filter: unset;
+            font-family: system-ui;
+            font-weight: 600;
+
+        }
+
+
+        .close-btn {
+            /* background-color: red;
+            border: 0px;
+            color: white;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-radius: 15px; */
+            padding: 8px 15px;
+            border-radius: 23px;
+            border: solid 4px #005691;
+            font-size: 18px;
+            color: #0075c5;
+            background: white;
+        }
+
+        .read-more-btn {
+            text-align: center;
+            width: 50%;
+            /* margin: auto; */
+            /* margin-top: 50px; */
+        }
+
+        .read-more-btn:hover {
+            background: unset;
+            border: solid 2px #0075c5;
+            width: 50%;
+            transition: all 0.5s ease-in-out;
+            background-color: black;
+        }
+
+        .read_btn_position {
+            position: absolute;
+            width: 90%;
+            /* margin-top: 50px; */
+        }
+
+        .contact {
+            margin: 2px 0px !important;
+            padding: 3px 0px !important;
+        }
+
+        .button_bg {
+            background: transparent;
+            border: none;
+        }
+
+        .button_a {
+            text-decoration: none;
+            background: transparent;
+            font-size: 25px;
+            color: white;
+        }
+
+        @media (max-width: 650px) {
+            .read-more-btn {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 550px) {
+            .header_text {
+                font-size: 20px !important;
+            }
+        }
+
+        .Content_img {
+            width: 100%;
+            height: 425px;
+            /* padding: 10px 19px; */
+        }
+
+        .center_line {
+            padding: 88px 21px;
+            border-left: solid 2px #0075c5;
+            border-radius: 10px 0px 0px 10px;
+        }
+
+        .row_edit {
+            flex-wrap: wrap-reverse;
+        }
+
+        .center_right_line {
+            border-right: solid 2px #0075c5;
+            border-radius: 10px;
+        }
+
+        .center_left_line {
+            border-left: solid 2px #0075c5;
+            border-radius: 10px;
+        }
+
+        .box.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .box {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .card_img {
+            width: 50%;
+            height: 425px;
+            border: 2px solid #0075c5;
+            transform: rotate(3deg);
+            transition: all 0.5s ease-in-out;
+        }
+
+        .card_body_edit {
+            position: absolute;
+            border: 2px solid #0075c5;
+            width: 50%;
+            height: 425px;
+            transform: rotate(-3deg);
+            transition: all 0.5s ease-in-out;
+            overflow: hidden;
+        }
+
+        .card_hover_animation:hover {
+
+            .card_body_edit {
+                transform: rotate(0deg);
+                margin-left: 500px;
+                height: auto;
+                z-index: 1000;
+                background-color: black;
+            }
+
+            .card_img {
+                width: 50%;
+                height: auto;
+                transform: rotate(0deg);
+
+                border: 2px solid #0075c5;
+                margin-right: 635px;
+
+            }
+        }
+
+        @media screen and (max-width: 2600px) and (min-width: 2200px) {
+
+            .card_hover_animation:hover {
+                .card_img {
+                    width: 38%;
+                }
+
+                p {
+                    font-size: 21px;
+                }
+
+                .p_edit {
+                    font-size: 21px;
+                }
+
+                .sub_title_hover {
+                    font-size: 32px;
+                }
+
+                .card_body_edit {
+                    width: 31%;
+                    margin-left: 773px;
+                    padding: 53px 86px;
+                    height: auto;
+                    z-index: 1000;
+                    background-color: black;
+                }
+            }
+        }
+
+        @media screen and (max-width: 2199px) and (min-width: 2000px) {
+
+            .card_hover_animation:hover {
+                .card_img {
+                    width: 40%;
+                }
+
+                p {
+                    font-size: 18px;
+                }
+
+                .p_edit {
+                    font-size: 18px;
+                }
+
+                .sub_title_hover {
+                    font-size: 28px;
+                }
+
+                .card_body_edit {
+                    margin-left: 750px;
+                    padding: 45px 100px;
+                    width: 40%;
+                    height: auto;
+                    z-index: 1000;
+                    background-color: black;
+                }
+            }
+        }
+
+        @media screen and (max-width: 1999px) and (min-width: 1800px) {
+
+            .card_hover_animation:hover {
+                .card_img {
+                    width: 44%;
+                }
+
+                p {
+                    font-size: 18px;
+                }
+
+                .p_edit {
+                    font-size: 18px;
+                }
+
+                .sub_title_hover {
+                    font-size: 28px;
+                }
+
+
+                .card_body_edit {
+                    margin-left: 700px;
+                    padding: 35px 52px;
+                    width: 39%;
+                    height: auto;
+                    z-index: 1000;
+                    background-color: black;
+                }
+            }
+        }
+
+        @media screen and (max-width: 1799px) and (min-width: 1500px) {
+
+            .card_hover_animation:hover {
+                .card_img {
+                    max-width: 49%;
+                    margin-right: 554px;
+
+                }
+
+                .sub_title_hover {
+                    font-size: 28px;
+                }
+
+                p {
+                    font-size: 18px;
+                }
+
+                .p_edit {
+                    font-size: 18px;
+                }
+
+                .card_body_edit {
+                    padding: 0px 0px 11px 20px;
+                    height: auto;
+                    margin-right: -119px;
+                    max-width: 49%;
+                    z-index: 1000;
+                    background-color: black;
+                }
+            }
+        }
+
+        @media screen and (max-width: 1499px) and (min-width: 1200px) {
+
+            .card_hover_animation:hover {
+                .card_img {
+                    max-width: 56%;
+                    margin-right: 493px;
+
+                }
+
+                .sub_title_hover {
+                    font-size: 27px;
+                }
+
+                .card_body_edit {
+                    max-width: 55%;
+                    margin-left: 654px;
+                    padding: 26px 58px;
+                    z-index: 1000;
+                    background-color: black;
+                }
+            }
+        }
+
+        @media screen and (max-width: 1199px) and (min-width: 992px) {
+
+            .card_hover_animation:hover {
+                .card_img {
+                    max-width: 56%;
+                    margin-right: 388px;
+
+                }
+
+                .sub_title_hover {
+                    font-size: 27px;
+                }
+
+                .card_body_edit {
+                    max-width: 51%;
+                    margin-left: 512px;
+                    padding: 26px 24px;
+                    z-index: 1000;
+                    background-color: black;
+                }
+            }
+        }
+
+        @media screen and (max-width: 991px) and (min-width: 800px) {
+            .card_hover_animation {}
+
+            .card_hover_animation:hover {
+                .card_img {
+                    margin-right: 0px;
+                    margin: 0% 50% 0px 0px;
+                    height: auto;
+                }
+
+                .sub_title_hover {
+                    font-size: 25px;
+                }
+
+                .card_body_edit {
+                    margin: 1% 10px 10px 33%;
+                    z-index: 1000;
+                    background-color: black;
+                    /* padding: 10px; */
+                    height: auto;
+                }
+            }
+
+        }
+
+        @media screen and (max-width: 799px) and (min-width: 750px) {
+            .card_hover_animation {}
+
+            .card_hover_animation:hover {
+                .card_img {
+                    margin-right: 0px;
+                    margin: 0% 50% 0px 0px;
+                    height: auto;
+                }
+
+                .sub_title_hover {
+                    font-size: 25px;
+                }
+
+                .card_body_edit {
+                    margin: 0% 0px 0px 8%;
+                    z-index: 1000;
+                    background-color: black;
+                    /* padding: 10px; */
+                    height: auto;
+                    width: 61%;
+                }
+            }
+
+        }
+
+        @media screen and (max-width: 749px) and (min-width: 600px) {
+            .card_hover_animation {}
+
+            .card_hover_animation:hover {
+                .card_img {
+                    margin-right: 0px;
+                    margin: 0% 50% 0px 0px;
+                    height: auto;
+                }
+
+                .sub_title_hover {
+                    font-size: 24px;
+                }
+
+                .card_body_edit {
+                    margin: 11% 0px 0px 3%;
+                    width: 75%;
+                    z-index: 1000;
+                    background-color: black;
+                    /* padding: 10px; */
+                    height: auto;
+                }
+            }
+        }
+
+        @media screen and (max-width: 599px) and (min-width: 400px) {
+            .card_hover_animation {
+                p {
+                    font-size: 10px;
+                }
+
+                .p_edit {
+                    font-size: 10px;
+                }
+
+                li {
+                    font-size: 10px;
+                }
+
+                .sub_title_hover {
+                    font-size: 20px;
+                }
+
+                .card_body_edit {
+                    height: 300px;
+                    width: 60%;
+                }
+
+                .card_img {
+                    height: 300px;
+                    width: 65%;
+                }
+            }
+
+            .card_hover_animation:hover {
+                .card_img {
+                    margin-right: 0px;
+                    margin: 0% 50% 0px 0px;
+                    height: auto;
+                }
+
+                p {
+                    font-size: 10px;
+                }
+
+                .p_edit {
+                    font-size: 10px;
+                }
+
+                li {
+                    font-size: 10px;
+                }
+
+                .sub_title_hover {
+                    font-size: 15px;
+                }
+
+                .card_body_edit {
+                    margin: 11% 0px 0px 3%;
+                    width: 100%;
+                    z-index: 1000;
+                    background-color: black;
+                    /* padding: 10px; */
+                    height: auto;
+                }
+            }
+
+        }
+
+        @media screen and (max-width: 399px) and (min-width: 300px) {
+            .card_hover_animation {
+                p {
+                    font-size: 8px;
+                }
+
+                .p_edit {
+                    font-size: 8px;
+                }
+
+                li {
+                    font-size: 8px;
+                }
+
+                .sub_title_hover {
+                    font-size: 14px;
+                }
+
+                .card_body_edit {
+                    height: 250px;
+                    width: 60%;
+                }
+
+                .card_img {
+                    height: 250px;
+                    width: 65%;
+                }
+            }
+
+            .card_hover_animation:hover {
+                .card_img {
+                    margin-right: 0px;
+                    margin: 0% 50% 0px 0px;
+                    height: auto;
+                }
+
+                p {
+                    font-size: 10px;
+                }
+
+                .p_edit {
+                    font-size: 10px;
+                }
+
+                li {
+                    font-size: 10px;
+                }
+
+                .sub_title_hover {
+                    font-size: 14px;
+                }
+
+                .card_body_edit {
+                    margin: 25% 0px 0px 3%;
+                    width: 100%;
+                    z-index: 1000;
+                    background-color: black;
+                    /* padding: 10px; */
+                    height: auto;
+                }
+            }
+
+        }
+
+        @media screen and (max-width: 299px) and (min-width: 200px) {
+            .card_hover_animation {
+                margin-top: 50px;
+
+                p {
+                    font-size: 4px;
+                }
+
+                .p_edit {
+                    font-size: 4px;
+                }
+
+                li {
+                    font-size: 4px;
+                }
+
+                .sub_title_hover {
+                    font-size: 9px;
+                }
+
+                .card_body_edit {
+                    height: 200px;
+                    width: 60%;
+                }
+
+                .card_img {
+                    height: 200px;
+                    width: 65%;
+                }
+            }
+
+            .card_hover_animation:hover {
+                .card_img {
+                    margin-right: 0px;
+                    margin: 0% 50% 0px 0px;
+                    height: auto;
+                }
+
+                p {
+                    font-size: 7px;
+                }
+
+                .p_edit {
+                    font-size: 7px;
+                }
+
+                li {
+                    font-size: 7px;
+                }
+
+                .card_body_edit {
+                    margin: 25% 0px 0px 3%;
+                    width: 100%;
+                    z-index: 1000;
+                    background-color: black;
+                    /* padding: 10px; */
+                    height: auto;
+                }
+            }
+
+        }
+
+        @media screen and (max-width: 199px) and (min-width: 9px) {
+            .card_hover_animation {
+                p {
+                    font-size: 4px;
+                }
+
+                .p_edit {
+                    font-size: 4px;
+                }
+
+                li {
+                    font-size: 4px;
+                }
+
+                .card_body_edit {
+                    height: 200px;
+                    width: 60%;
+                }
+
+                .card_img {
+                    height: 200px;
+                    width: 65%;
+                }
+            }
+
+            .card_hover_animation:hover {
+                margin-top: 25px;
+
+                .card_img {
+                    margin-right: 0px;
+                    margin: 0% 50% 0px 0px;
+                    height: auto;
+                }
+
+                p {
+                    font-size: 4px;
+                }
+
+                .p_edit {
+                    font-size: 4px;
+                }
+
+                li {
+                    font-size: 4px;
+                }
+
+                .card_body_edit {
+                    margin: 25% 0px 0px 3%;
+                    width: 100%;
+                    z-index: 1000;
+                    background-color: black;
+                    /* padding: 10px; */
+                    height: auto;
+                }
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="modal-body "
+        style="background-color: black; height: auto; width: 100%; padding: 3vw 4vw;   border: 2px solid #0073c2;">
+        <button class="btn-close button_bg" data-bs-dismiss="modal" aria-label="Close"><a class="button_a "
+                href="services.html"><i class="fa-solid fa-xmark"></i></a></button>
+
+        <style>
+            /* styles.css */
+            .row_hover8 {
+                opacity: 0.3;
+            }
+
+            .highlighted {
+                /* background-color: yellow; */
+                opacity: 1;
+            }
+        </style>
+        <script>
+            // script.js
+            document.addEventListener('DOMContentLoaded', () => {
+                const rows = document.querySelectorAll('#highlight-table8 .row_hover8');
+                let currentIndex = 0;
+                let intervalId;
+                let isMouseOver = false;
+
+                // Function to highlight rows one by one
+                const highlightRowsSequentially = () => {
+                    if (!isMouseOver) {
+                        rows.forEach((row, index) => {
+                            if (index === currentIndex) {
+                                row.classList.add('highlighted');
+                            } else {
+                                row.classList.remove('highlighted');
+                            }
+                        });
+                        currentIndex = (currentIndex + 1) % rows.length;
+                    }
+                };
+
+                // Start the sequential highlighting with an interval
+                const startHighlighting = () => {
+                    intervalId = setInterval(highlightRowsSequentially, 1000); // Change the interval as needed
+                };
+
+                // Stop the sequential highlighting
+                const stopHighlighting = () => {
+                    clearInterval(intervalId);
+                };
+
+                // Add event listeners for mouseover effect
+                rows.forEach(row => {
+                    row.addEventListener('mouseover', () => {
+                        isMouseOver = true;
+                        row.classList.add('highlighted');
+                        stopHighlighting();
+                    });
+                    row.addEventListener('mouseout', () => {
+                        isMouseOver = false;
+                        row.classList.remove('highlighted');
+                        startHighlighting();
+                    });
+                });
+
+                // Handle visibility change to stop and start highlighting based on tab visibility
+                document.addEventListener('visibilitychange', () => {
+                    if (document.hidden) {
+                        stopHighlighting();
+                    } else {
+                        startHighlighting();
+                    }
+                });
+
+                // Initial start of the highlighting
+                startHighlighting();
+            });
+
+        </script>
+        <!-- contant start  -->
+
+        <div class="modal-body popup_edit">
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const boxes = document.querySelectorAll('.box');
+
+                    const scrollHandler = () => {
+                        boxes.forEach(box => {
+                            const boxTop = box.getBoundingClientRect().top;
+                            const triggerPoint = window.innerHeight - 200; // Adjust the trigger point if necessary
+
+                            if (boxTop < triggerPoint) {
+                                box.classList.add('show');
+                            }
+                        });
+                    };
+
+                    window.addEventListener('scroll', scrollHandler);
+
+                    // Run the scroll handler once to catch elements already in view
+                    scrollHandler();
+                });
+
+            </script>
+            <div class='ser-des' id="highlight-table8">
+
+                <!-- 1 service  -->
+                <div style=' margin-top: 100px;' class='row row_edit card_hover_animation'>
+
+                    <div class='card_body_edit'>
+                        <div class='col-sm-12'>
+                            <div style=' padding: 0px 0px;' class='row '>
+                                <div class='card-body card'>
+                                    <p>In today's fast-paced world, where innovation
+                                        continuously evolves and connectivity
+                                        becomes intrinsic, the interactions between
+                                        individuals, applications, enterprises face
+                                        increasingly sophisticated and widespread
+                                        cyber threats that are challenging to
+                                        combat. Embedding cybersecurity within your
+                                        technology framework and integrating it at
+                                        every phase of your business lifecycle is
+                                        crucial to fortify cyber defense, foster
+                                        resilience, and instill a security-centric
+                                        culture across the organization.</p>
+                                    <p>The current imperative involves integrating
+                                        security seamlessly into the fabric of your
+                                        enterprise and safeguarding the future.</p>
+                                </div>
+                            </div>
+                            <div class='overlay'></div>
+                        </div>
+                    </div>
+                    <div class='col-lg '>
+                        <div style="display: flex; justify-content: center;">
+                            <img class='card_img '
+                                src='https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTqbRl2UBHDeNnP1h7uspLvfRqwAvfROgxOMa3lTXHetHR5pRBA'
+                                alt=''>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2 service  -->
+                <div style=' margin-top: 100px;' class='row row_edit card_hover_animation'>
+
+                    <div class='card_body_edit'>
+                        <div class='col-sm-12'>
+                            <div style=' padding: 0px 0px;' class='row '>
+                                <div class='card-body card'>
+                                    <li><b style='color:#0075C5' class="sub_title_hover"> Secure by
+                                            Design :</b>
+                                        <p class="p_edit"> We facilitate enterprises in
+                                            adopting a 'Secure by Design' approach,
+                                            instilling a mindset that prioritizes
+                                            security across every stage of the business
+                                            lifecycle. This ensures heightened
+                                            visibility into security threats, their
+                                            impacts, resolutions, and minimizes
+                                            associated risks.</p>
+                                    </li>
+                                    <li><b style='color:#0075C5' class="sub_title_hover"> Secure by
+                                            Scale :</b>
+                                        <p class="p_edit"> Our commitment lies in
+                                            establishing resilient cybersecurity
+                                            programs that empower customers to operate
+                                            at scale while enhancing operational
+                                            efficiency and reducing costs. Our strategic
+                                            investments in global security operation
+                                            centers, AI & ML-based integrated
+                                            cybersecurity platforms, and partnerships
+                                            with leading cybersecurity research
+                                            universities optimize costs and expand our
+                                            reach, ensuring security is scalable.</p>
+                                    </li>
+                                    <li><b style='color:#0075C5' class="sub_title_hover">Secure the
+                                            Future :</b>
+                                        <p class="p_edit"> Our aim is to assist
+                                            enterprises in 'Securing the Future' by
+                                            continuously embracing new technologies and
+                                            adapting to evolving landscapes, thereby
+                                            accelerating innovation and delivering
+                                            enhanced value. Our clients benefit from
+                                            advanced threat-hunting capabilities,
+                                            comprehensive analytics, malware analysis,
+                                            and cutting-edge technology innovations
+                                            developed in the Infosys Security R&D Labs.
+                                        </p>
+                                    </li>
+                                </div>
+                            </div>
+                            <div class='overlay'></div>
+                        </div>
+                    </div>
+                    <div class='col-lg '>
+                        <div style="display: flex; justify-content: center;">
+                            <img class='card_img ' src='img/sub_popup_7.1.png' alt=''>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- <div style=' overflow-x: hidden;   margin-top: 24px;' class='row row_edit row_hover8 '>
+                <div class='col-lg center_right_line box' id="box1">
+                    <div class='col-sm-12'>
+                        <div style='    padding: 0px 0px;' class='row card '>
+                             <div class='card-body'>
+                                <p>In today's fast-paced world, where innovation
+                                    continuously evolves and connectivity
+                                    becomes intrinsic, the interactions between
+                                    individuals, applications, enterprises face
+                                    increasingly sophisticated and widespread
+                                    cyber threats that are challenging to
+                                    combat. Embedding cybersecurity within your
+                                    technology framework and integrating it at
+                                    every phase of your business lifecycle is
+                                    crucial to fortify cyber defense, foster
+                                    resilience, and instill a security-centric
+                                    culture across the organization.</p>
+                                <p>The current imperative involves integrating
+                                    security seamlessly into the fabric of your
+                                    enterprise and safeguarding the future.</p>
+                            </div>
+                        </div>
+                        <div class='overlay'></div>
+                    </div>
+                </div>
+                <div class='col-lg box' id="box1">
+                    <div>
+                        <img class='Content_img img_border'
+                            src='https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTqbRl2UBHDeNnP1h7uspLvfRqwAvfROgxOMa3lTXHetHR5pRBA'
+                            alt=''>
+                    </div>
+                </div>
+            </div> -->
+
+                <!-- <div style=' overflow-x: hidden;   margin-top: 24px;' class='row row_hover8 '>
+                <div class='col-lg box' id="box2">
+                    <div>
+                        <img class='Content_img img_border' src='img/sub_popup_7.1.png' alt=''>
+                    </div>
+                </div>
+                <div class='col-lg center_left_line box' id="box2">
+                    <div class='col-sm-12'>
+                        <div style='padding: 0px 0px;' class='row card '>
+                            <div class='card-body'>
+                                <li><b style='color:#0075C5' class="sub_title"> Secure by
+                                        Design :</b><p> We facilitate enterprises in
+                                    adopting a 'Secure by Design' approach,
+                                    instilling a mindset that prioritizes
+                                    security across every stage of the business
+                                    lifecycle. This ensures heightened
+                                    visibility into security threats, their
+                                    impacts, resolutions, and minimizes
+                                    associated risks.</p></li>
+                                <li><b style='color:#0075C5' class="sub_title"> Secure by
+                                        Scale :</b> <p> Our commitment lies in
+                                    establishing resilient cybersecurity
+                                    programs that empower customers to operate
+                                    at scale while enhancing operational
+                                    efficiency and reducing costs. Our strategic
+                                    investments in global security operation
+                                    centers, AI & ML-based integrated
+                                    cybersecurity platforms, and partnerships
+                                    with leading cybersecurity research
+                                    universities optimize costs and expand our
+                                    reach, ensuring security is scalable.</p></li>
+                                <li><b style='color:#0075C5' class="sub_title">Secure the
+                                        Future :</b><p> Our aim is to assist
+                                    enterprises in 'Securing the Future' by
+                                    continuously embracing new technologies and
+                                    adapting to evolving landscapes, thereby
+                                    accelerating innovation and delivering
+                                    enhanced value. Our clients benefit from
+                                    advanced threat-hunting capabilities,
+                                    comprehensive analytics, malware analysis,
+                                    and cutting-edge technology innovations
+                                    developed in the Infosys Security R&D Labs.
+                                </p></li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div><br /> -->
+
+                <p class="p_edit mt-5">Guided by our 3S principles, we are committed to constructing
+                    a comprehensive security program through our service
+                    offerings, adopting a 4D approach:
+                    Diagnose-Design-Deliver-Defend.</p>
+
+
+                <!-- 3 service  -->
+                <div style=' margin-top: 100px;' class='row row_edit card_hover_animation'>
+
+                    <div class='card_body_edit'>
+                        <div class='col-sm-12'>
+                            <div style=' padding: 0px 0px;' class='row '>
+                                <div class='card-body card'>
+                                    <p class='sub_title_hover' style="color: #005691; font-weight: 600;">
+                                        Our AI-First framework aims to facilitate data
+                                        monetization, encompassing:</p><br />
+                                    <li class="p_edit"><b style='color:#0075C5' class="sub_title_hover"> Diagnose :</b>
+                                        <p class="p_edit"> We assess and analyze your enterprise's
+                                            cybersecurity maturity comprehensively.</p>
+                                    </li>
+                                    <br>
+                                    <p class="d-flex">
+                                        <i style='color:#0075C5'>Assess</i> |
+                                        <i>Analyze</i> | <i style='color:#0075C5'>Advise</i>
+                                    </p>
+                                    <li class="p_edit"><b style='color:#0075C5' class="sub_title_hover1"> Design :</b>
+                                        <p class="p_edit"> We
+                                            create a scalable and future-ready
+                                            cybersecurity suite to implement a
+                                            holistic security strategy.</p>
+                                    </li>
+                                    <br>
+                                    <p class="p_edit"><i>Architect</i> | <i style='color:#0075C5'>Integrate</i> |
+                                        Standardize</i></p>
+                                    <li><b style='color:#0075C5' class="sub_title_hover">Deliver : </b>
+                                        <p class="p_edit"> We
+                                            transform, automate, and orchestrate
+                                            infrastructure, data, and applications
+                                            from on-premise to cloud.
+                                            <br><br>
+                                        <p class="p_edit"><i style='color:#0075C5'>Implement</i>
+                                            | <i>Mitigate</i> | <i style='color:#0075C5'>Transform</i></p>
+                                        </p>
+                                    <li><b style='color:#0075C5' class="sub_title_hover"> Defend : </b>
+                                        <p class="p_edit"> We
+                                            assist in governing, operating,
+                                            monitoring, detecting, and responding to
+                                            cyber threats effectively.
+                                            <br><i>Operate</i> |<i style='color:#0075C5'>
+                                                Respond</i> |
+                                            <i>Govern</i>
+                                        </p>
+                                </div>
+                            </div>
+                            <div class='overlay'></div>
+                        </div>
+                    </div>
+                    <div class='col-lg '>
+                        <div style="display: flex; justify-content: center;">
+                            <img class='card_img ' src='img/sub_popup_7.2.gif' alt=''>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="headding_text" style=" margin-top: 100px;
+font-weight: 700;">We specialize in :</h2>
+                    <div class="row box" id="box4">
+                        <div class="col" style="text-align: center;    padding: 20px 20px;">
+                            <span><img style="width: 75px;" src="img/Mobile Application Security.png" alt=""
+                                    srcset=""></span>
+                            <p style="margin-top: 10px;" class="headding_text"> Mobile Application Security</p>
+                        </div>
+                        <div class="col" style="text-align: center;    padding: 20px 20px;">
+                            <span><img style="width: 120px;" src="img/SaaS security.png" alt="" srcset=""></span>
+                            <p style="margin-top: 10px;">SaaS security
+                            </p>
+                        </div>
+                        <div class="col" style="text-align: center;    padding: 20px 20px;">
+                            <span><img style="width: 75px;" src="img/Penetration Testing.png" alt="" srcset=""></span>
+                            <p style="margin-top: 10px;">Penetration Testing </p>
+                        </div>
+                        <div class="col" style="text-align: center;    padding: 20px 20px;">
+                            <span><img style="width: 75px;" src="img/Network Security.png" alt="" srcset=""></span>
+                            <p style="margin-top: 10px;"> Network Security
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row box" id="box5">
+                        <div class="col" style="text-align: center;    padding: 20px 20px;">
+                            <span><img style="width: 75px;" src="img/service_card_icon_2.2.png" alt="" srcset=""></span>
+                            <p style="margin-top: 10px;"> Endpoint Security </p>
+                        </div>
+                    </div>
+                    <h2 class="headding_text" style="
+font-weight: 700;">Technology we work with :</h2>
+                    <div class="row box" id="box6">
+                        <div class="col" style="text-align: center;    padding: 20px 20px;">
+                            <span><img style="width: 75px;" src="img/python.png" alt="" srcset=""></span>
+                            <p style="margin-top: 10px;"> Python</p>
+                        </div>
+                        <div class="col" style="text-align: center;    padding: 20px 20px;">
+                            <span><img style="width: 75px;" src="img/javascript(node).png" alt="" srcset=""></span>
+                            <p style="margin-top: 10px;">JavaScript (Node.js)
+                            </p>
+                        </div>
+                        <div class="col" style="text-align: center;    padding: 20px 20px;">
+                            <span><img style="width: 75px;" src="img/c++.png" alt="" srcset=""></span>
+                            <p style="margin-top: 10px;">C/C++ </p>
+                        </div>
+                        <div class="col" style="text-align: center;    padding: 20px 20px;">
+                            <span><img style="width: 75px;" src="img/java.png" alt="" srcset=""></span>
+                            <p style="margin-top: 10px;"> Java
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row box" id="box7">
+                        <div class="col" style="text-align: center;    padding: 20px 20px;">
+                            <span><img style="width: 75px;" src="img/Ruby.png" alt="" srcset=""></span>
+                            <p style="margin-top: 10px;"> Ruby </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- contant end  -->
+            </div>
+            <button style="margin-top: 20px;" data-bs-dismiss="modal" aria-label="Close" class="view-less-btn"><a
+                    style="text-decoration: none;color: white;" href="services.html"> View Less </a></button>
+        </div>
+
+
+</body>
+
+</html>

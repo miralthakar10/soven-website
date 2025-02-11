@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="icon" type="images/x-icon" href="img/logo.png" />
+    <link href="https://db.onlinewebfonts.com/c/8f2a9d487bbbc60974cd132fc3a63862?family=Aeonik+Regular"
+        rel="stylesheet">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.slim.min.js"></script>
+    <script src="js/bootstrap.bundle2.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stars.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Soven Developers-About Us</title>
+    <style>
+        body {
+            width: 100%;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: black;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #0075C5;
+            border-radius: 10px;
+        }
+        .service-card {
+            height: 100%;
+            width: 100%;
+            border-radius: unset;
+        }
+
+        .contact {
+            margin: 2px 0px !important;
+            padding: 3px 0px !important;
+        }
+
+        .Content_img {
+            height: 489px;
+            width: 100%;
+
+        }
+
+        .row_edit {
+            flex-wrap: wrap-reverse;
+        }
+
+        .Card_top {
+            margin-top: 25px;
+        }
+
+        .Card_edit {
+            padding: 5rem !important;
+        }
+
+        .img_border {
+            border: solid 2px #0075c5;
+        }
+
+
+        @media (max-width: 950px) {
+            .service-card-list {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center !important;
+                margin-left: -5%;
+            }
+
+            .service-card {
+                height: 100%;
+                width: 100%;
+                margin-bottom: 20px;
+
+            }
+
+        }
+
+        @media screen and (max-width: 449px) and (min-width: 200px) {
+            .bks h1 {
+                font-size: 20px;
+            }
+
+            .bks p {
+                font-size: 13px;
+                letter-spacing: 0.5px;
+                color: white;
+            }
+
+            .bks span img {
+                width: 60px;
+                height: 60px;
+                margin-top: 0px;
+                margin-bottom: 0px;
+            }
+        }
+
+        @media screen and (max-width: 699px) and (min-width: 450px) {
+            .bks h1 {
+                font-size: 20px;
+            }
+
+            .bks p {
+                font-size: 13px;
+                letter-spacing: 0.5px;
+                color: white;
+            }
+
+            .bks span img {
+                width: 91px;
+                height: 91px;
+                margin-top: 0px;
+                margin-bottom: 0px;
+            }
+        }
+
+        @media screen and (max-width: 991px) and (min-width: 700px) {
+            .bks h1 {
+                font-size: 32px;
+            }
+
+            .bks p {
+                font-size: 17px;
+                letter-spacing: 0.5px;
+                color: white;
+            }
+
+            .bks span img {
+                width: 110px;
+                height: 110px;
+                margin-top: 0px;
+                margin-bottom: 0px;
+            }
+        }
+
+        @media screen and (max-width: 1200px) and (min-width: 992px) {
+            .bks h1 {
+                font-size: 32px;
+            }
+
+            .bks p {
+                font-size: 17px;
+                letter-spacing: 0.5px;
+                color: white;
+            }
+
+            .bks span img {
+                width: 110px;
+                height: 110px;
+                margin-top: 0px;
+                margin-bottom: 0px;
+            }
+        }
+
+        @media screen and (max-width: 2000px) and (min-width: 1200px) {
+            .bks h1 {
+                font-size: 32px;
+            }
+
+            .bks p {
+                font-size: 17px;
+                letter-spacing: 0.5px;
+                color: white;
+            }
+
+            .bks span img {
+                width: 110px;
+                height: 110px;
+                margin-top: 0px;
+                margin-bottom: 0px;
+            }
+        }
+
+        @media screen and (max-width: 2650px) and (min-width: 2000px) {
+            .bks h1 {
+                font-size: 32px;
+            }
+
+            .bks p {
+                font-size: 17px;
+                letter-spacing: 0.5px;
+                color: white;
+            }
+
+            .bks span img {
+                width: 110px;
+                height: 110px;
+                margin-top: 0px;
+                margin-bottom: 0px;
+            }
+        }
+
+
+        @media screen and (max-width: 449px) and (min-width: 200px) {
+            .bg_fite {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                padding: 0px 0px 0px 0px;
+            }
+
+            .give h1 {
+                font-size: 23px;
+            }
+
+            .heading h1 {
+                font-size: 23px;
+            }
+        }
+            .under_line {
+                border: solid 2px white;
+                width: 10%;
+                filter: drop-shadow(10px 9px 5px #0075c5);
+                text-align: center;
+            }
+            @media screen and (max-width: 450px) and (min-width: 300px) {
+                    .heading h1 {
+                        font-size: 24px;
+                    }
+                }
+
+                @media screen and (max-width: 299px) and (min-width: 50px) {
+                    .heading h1 {
+                        font-size: 20px;
+                    }
+                }
+    </style>
+</head>
+
+<body>
+    <!-- <p class="top-left-fade-nav"></p> -->
+
+    <div class="container-fluid mt-2">
+
+        <nav class="navbar navbar-expand-lg navbar-dark" style="padding: 2.5vw 0vw;">
+
+            <a class='navbar-brand' href='index.html'>
+                <!-- <img src="img/SD logo animation - GIF.gif" class="d-inline-block align-center navbar_brand_image"
+                        alt=""> -->
+                <a class="navbar-brand" href="#" style="margin-left: -47px;">
+                    <img src="img/logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top"
+                        style="font-size: 20px;">
+                    SOVEN DEVELOPER
+                </a>
+                <!-- <div class="d-flex align-center text-center navbar_brand_image ">
+                            <img style="height: 30px;" src="img/logo.png" alt="" srcset="">&nbsp;
+                             <h2 style="color: white; font-size: 19px;">SOVEN DEVLOPER</h2>
+                        </div> -->
+                <!-- Soven Developer -->
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span style="color: white;"><i class="fa-solid fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse " style="text-align: center;" id="navbarNav">
+                <ul id="menu" class="navbar-nav ml-auto text-start nav_edit_home">
+                    <li class="nav-item nav_responsive">
+                        <a class="" href='index.html'>Home</a>
+                    </li>
+                    <li class="nav-item nav_responsive">
+                        <a class="" href='aboutus.html' >About Us</a>
+                    </li>
+                    <li class="nav-item nav_responsive">
+                        <a class="" href='services.html'>Fields We Work In</a>
+                    </li>
+                    <li class="nav-item nav_responsive">
+                        <a class="" href='Ourexpertise.html'>Our Expertise</a>
+                    </li>
+                    <li class="nav-item nav_responsive">
+                        <a class="" href='outsourcing.html'> Service Programs</a>
+                    </li>
+                    <!-- <li class="nav-item nav_responsive">
+                            <a class="" href='technicalservices.html'> Technical Partner Service</a>
+                        </li> -->
+                        <li class="nav-item nav_responsive">
+                            <a class="" href='Startupstudio.html' id="th">Startup Studio</a>
+                        </li>
+                    <li class="nav-item nav_responsive">
+                        <a class="" href='aidevelopment.html'> AI Development & Data Service</a>
+                    </li>
+                    <li class="nav-item contact_btn_edit nav_responsive">
+                        <a href='contact.html'>Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+<div>
+    <center class="ghj mt-5">
+        <!-- <div class="btn-1  text-white sub_title" style="border: #0075C5 solid 1px; width:200px">WE STAND OUT</div> -->
+        <div class="heading">
+            <h1 style="font-weight: 600;">Welcome to Startup Studio</h1>
+            <p class="under_line"></p>
+            <h1 style="color:white;margin-top: 20px;">Empowering ideas, building IT solutions.</h1>
+        </div>
+       
+    </center>
+    <div class="container-fluid mt-5 mb-5" style="position: relative;">
+        <div style="text-align: -webkit-auto;">
+
+            <img src='img/backgroung_img.png' class="bg_fite" alt="">
+        </div>
+        <div class="row justify-content-center give">
+            <div class="col-12 col-md-9 p-4 headding_box pane" style="margin-bottom: 200px;">
+                <div>
+                    <h1 class="text-center headiing_page" style="margin-top: 3vw;">Transforming Ideas into IT Solutions</h1>
+                </div>
+                <p class="mt-3 text-center intro" style="
+                        font-size: 19px;
+                        color: rgb(224, 224, 224);
+                        padding: 1vw;
+                        font-weight: 700;
+                        line-height: 36.71px;
+                         text-align: center;
+
+                ">
+                  At Startup Studio, we specialize in developing cutting-edge IT products that drive innovation and market disruption. From concept to deployment, we're dedicated to turning your vision into reality with precision and agility.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <center class="ghj">
+        <!-- <div class="btn-1  text-white sub_title" style="border: #0075C5 solid 1px; width:200px">WE STAND OUT</div> -->
+        <div class="heading">
+            <h1 style="font-weight: 600;"> Our Services</h1>
+            <p class="under_line"></p>
+        </div>
+       
+    </center>
+
+        <div class="container">
+            <div class="row justify-content-center section-content text-center">
+                <!-- service 1  -->
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb-4 mt-5">
+                    <div class="card_body bks h-auto card_hover"
+                        style=" width: auto;padding: 18px 33px; border-radius: 12px;text-align: center;">
+                        <span
+                            style="filter: drop-shadow(-26px -1px 17px #45005e);display: flex;justify-content: center;"><img
+                                width="100px" src="img/it_product_development.png" alt=""></span><br>
+                        <h1 class="" style="
+                  color: #0075c5;
+                  font-weight: 600; 
+                  filter: drop-shadow(9px 12px 10px #511987);     padding: 10px 17px;
+        ">IT Product Development</h1>
+                        <p>Explore our expertise in crafting bespoke IT solutions tailored to your business needs. We leverage the latest technologies and agile methodologies to deliver scalable, user-centric products that propel your success.</p>
+                     
+                    </div>
+                </div>
+
+                <!-- service 2  -->
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb-4 mt-5">
+                    <div class="card_body bks h-auto card_hover"
+                        style=" width: auto;padding: 18px 33px; border-radius: 12px;text-align: center;">
+                        <span
+                            style="filter: drop-shadow(-26px -1px 17px #45005e);display: flex;justify-content: center;"><img
+                                width="100px" src="img/Mentorship and Advisory.png" alt=""></span><br>
+                        <h1 class="" style="
+                  color: #0075c5;
+                  font-weight: 600; 
+                  filter: drop-shadow(9px 12px 10px #511987);     padding: 10px 17px;
+        ">Mentorship and Advisory</h1>
+                        <p>Navigate the complexities of IT innovation with guidance from our experienced mentors. Our advisory services provide strategic insights and actionable advice to help you achieve sustainable growth.</p>
+                     
+                    </div>
+                </div>
+
+                <!-- service 3  -->
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb-4 mt-5">
+                    <div class="card_body bks h-auto card_hover"
+                        style=" width: auto;padding: 18px 33px; border-radius: 12px;text-align: center;">
+                        <span
+                            style="filter: drop-shadow(-26px -1px 17px #45005e);display: flex;justify-content: center;"><img
+                                width="100px" src="img/Investor Connections.png" alt=""></span><br>
+                        <h1 class="" style="
+                  color: #0075c5;
+                  font-weight: 600; 
+                  filter: drop-shadow(9px 12px 10px #511987);     padding: 10px 17px;
+        ">Investor Connections</h1>
+                        <p>Access strategic investors who understand the potential of your IT solutions. We facilitate connections that secure funding and accelerate your product's market entry and expansion.</p>
+                     
+                    </div>
+                </div>
+
+                <!-- service 4  -->
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb-4 mt-5">
+                    <div class="card_body bks h-auto card_hover"
+                        style=" width: auto;padding: 18px 33px; border-radius: 12px;text-align: center;">
+                        <span
+                            style="filter: drop-shadow(-26px -1px 17px #45005e);display: flex;justify-content: center;"><img
+                                width="100px" src="img/Financial Advisory.png" alt=""></span><br>
+                        <h1 class="" style="
+                  color: #0075c5;
+                  font-weight: 600; 
+                  filter: drop-shadow(9px 12px 10px #511987);     padding: 10px 17px;
+        ">Financial Advisory</h1>
+                        <p>Achieve financial clarity with our specialized advisory services. From budget planning to funding strategies, we equip you with the financial tools and insights needed to optimize your IT project's success.
+                        </p>
+                     
+                    </div>
+                </div>
+
+            </div>
+         </div>
+ 
+
+</div>
+  
+
+    <p class="border_line" style="margin-top:100px ;"><span></span></p>
+    <div class="container-fluid" id="footer">
+        <footer class="text-light text-center text-md-left">
+            <div class="container">
+                <div class="row mt-4 justify-content-md-between justify-content-center">
+                    <div class="col-12 col-md-6 pb-4">
+                        <div class="">
+                            <img src="img/logo.png" class="img-fluid" width="57" alt="">
+                        </div>
+                        <h5 class="mt-2 text-white">
+                            Soven Developer </h5>
+                        <p style="font-size: 13px;text-align: justify;" class="text-white-50">Sovendeveloper is a
+                            versatile company specializing in website
+                            development, app development, and software design. With their expertise in creating
+                            innovative and user-centric solutions, they deliver high-quality products tailored to meet
+                            client's specific needs.</p>
+                    </div>
+                    <div class="col-12 col-md-4 mb-4 mr-3">
+                        <style>
+                            @media (max-width: 769px) {
+                                .apps {
+                                    margin: 0 5% 0 0;
+                                }
+                            }
+                        </style>
+                        <div class="apps">
+                            <div class="row justify-content-md-end justify-content-center mt-md-5 ">
+                                <div class="col-2"><a href="https://m.facebook.com/sovendeveloper"
+                                        class="d-block px-10"><svg xmlns="http://www.w3.org/2000/svg" width="35"
+                                            height="35" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                            <path
+                                                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                                        </svg></a></div>
+                                <div class="col-2"><a href="https://twitter.com/DeveloperSoven"
+                                        class="d-block px-3"><svg xmlns="http://www.w3.org/2000/svg" width="35"
+                                            height="35" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                                            <path
+                                                d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15" />
+                                        </svg></a></div>
+                                <div class="col-2"><a
+                                        href="https://www.instagram.com/sovendeveloper?igsh=Z2hzc3dmOTFzYjUy"
+                                        class="d-block px-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35"
+                                            fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                                        </svg>
+
+
+                                    </a></div>
+                                <div class="col-2"> <a href="https://www.linkedin.com/company/soven-developer/"
+                                        class="d-block px-3"><svg xmlns="http://www.w3.org/2000/svg" width="35"
+                                            height="35" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                                            <path
+                                                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401m-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4" />
+                                        </svg></a></div>
+                                <div class="col-2"> <a
+                                        href="https://youtube.com/@sovendeveloper3909?si=Rd0I_B_fa8UnwS8s"
+                                        class="d-block px-3">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="40"
+                                            height="45" viewBox="0 0 32 24" id="youtube">
+                                            <path
+                                                d="M25 0H7C3.14 0 0 3.14 0 7v10c0 3.86 3.14 7 7 7h18c3.86 0 7-3.14 7-7V7c0-3.86-3.14-7-7-7zm5 17c0 2.757-2.243 5-5 5H7c-2.757 0-5-2.243-5-5V7c0-2.757 2.243-5 5-5h18c2.757 0 5 2.243 5 5v10z">
+                                            </path>
+                                            <path
+                                                d="m21.406 11.086-9-4A1 1 0 0 0 11 8v8a.999.999 0 0 0 1.406.914l9-4a1.001 1.001 0 0 0 0-1.828zM13 14.461V9.539L18.538 12 13 14.461z">
+                                            </path>
+                                        </svg>
+                                    </a></div>
+                            </div>
+                        </div>
+
+                        <style>
+                            .contact {
+                                margin: 0% 0 0 20%;
+                            }
+
+                            @media (max-width: 769px) {
+                                .contact {
+                                    margin: 0% 0 0 -7%;
+                                    /* display: none; */
+                                }
+                            }
+                        </style>
+                        <a href="" class="contact">suraj@sovendeveloper</a>
+                        <a href="" class="contact">paulbrown@sovendeveloper</a>
+                        <a href="tel:+44 (0)744 8006087" class="contact">+44 (0)744 8006087</a><br />
+                        <a href="" class="contact"> 6, St Paul’s Road, Twickenham,</a>
+                        <a href="" class="contact"> London, TW18 3HH</a>
+                    </div>
+                </div>
+
+                <p class="text-center py-4 text-white" style="font-size: 16px; border-top: #0075C5 2px solid;">
+                    sovendeveloper © 2023-24
+                </p>
+            </div>
+        </footer>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

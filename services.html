@@ -1,0 +1,3066 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="icon" type="images/x-icon" href="img/logo.png" />
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.slim.min.js"></script>
+    <script src="js/bootstrap.bundle2.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stars.css">
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/678e3af47d.js" crossorigin="anonymous"></script>
+    <link href="https://db.onlinewebfonts.com/c/8f2a9d487bbbc60974cd132fc3a63862?family=Aeonik+Regular"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <title>Soven Developers-Fields we Work In</title>
+    <style>
+        body {
+            width: 100%;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: black;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #0075C5;
+            border-radius: 10px;
+        }
+
+        .read-more-btn {
+            margin-top: 20px;
+        }
+
+        .service-card {
+            height: 100%;
+            width: 300px;
+            text-align: start;
+        }
+
+        .intro {
+            font-size: 16px;
+            margin-bottom: 1.25rem;
+            font-weight: 400;
+            color: #ffffffa6;
+        }
+
+        .contact {
+            margin: 2px 0px !important;
+            padding: 3px 0px !important;
+        }
+
+        @media (max-width: 950px) {
+            .service-card-list {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center !important;
+                margin-left: -5%;
+            }
+
+            .service-card {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .give h1 {
+                font-size: 32px;
+            }
+
+        }
+
+        .Service_icons {
+            text-align: start;
+        }
+
+        .Service_icons i {
+            color: white;
+            font-size: 47px;
+        }
+
+        .card {
+            position: relative;
+            /* Center-align the cards horizontally */
+            width: 100%;
+            margin: 20px 0px;
+            /* border: 1px solid #0075c5; */
+            padding: 6.5vw 4vw;
+
+            color: white;
+            /* Adjust the maximum width of the cards */
+            background-color: black;
+            /* background-image: radial-gradient(ellipse at bottom, rgba(255, 255, 255, 0.516), rgba(88, 88, 196, 0.473), black 70%); */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            height: auto;
+            /* Add a box shadow for depth */
+
+            .card-title {
+                margin: 0px;
+            }
+
+            h3 {
+                font-size: 34px;
+                letter-spacing: 0.5px;
+                text-align: left;
+                color: #0075C5;
+                margin: 0px;
+            }
+
+            p {
+                font-size: 14px;
+                text-align: justify;
+                margin-bottom: 1.25rem;
+                font-weight: 400;
+                color: #ffffffa6;
+                font-family: sans-serif;
+                letter-spacing: 0.5px;
+            }
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            /* margin-left: 5px; */
+            margin-top: 15px;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            overflow-y: auto;
+            /* Enable vertical scrolling */
+            filter: drop-shadow(2px 4px 6px #0075C5);
+            height: 100%;
+            width: 100%;
+            border: 1px solid #0075C5;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #000;
+
+            color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 9999;
+        }
+
+        h2 {
+            color: #0075C5;
+            text-align: left;
+        }
+
+        .card h2 {
+            font-size: 3vh;
+            text-align: left;
+        }
+
+        .ghj {
+            color: white;
+        }
+
+        /* Styles for the overlay background */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            background-color: black;
+            color: white;
+            left: 0;
+            width: 50%;
+            height: 50%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 999;
+        }
+
+        .popup p {
+            font-size: 3vh;
+            filter: unset;
+            margin-right: 30px;
+            margin-left: 30px;
+            font-family: system-ui;
+            letter-spacing: 0.5px;
+            /* text-align: justify; */
+
+
+        }
+
+        .popup ul {
+            font-size: 3vh;
+            margin-right: 30px;
+            margin-left: 30px;
+            text-align: justify;
+
+        }
+
+        .popup h2 {
+            font-size: 5.5vh;
+            text-align: center;
+            margin-bottom: 40px;
+            filter: unset;
+            font-family: system-ui;
+            font-weight: 600;
+
+        }
+
+
+        .close-btn {
+            /* background-color: red;
+            border: 0px;
+            color: white;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-radius: 15px; */
+            padding: 8px 15px;
+            border-radius: 23px;
+            border: solid 4px #005691;
+            font-size: 18px;
+            color: #0075c5;
+            background: white;
+        }
+
+        .read-more-btn {
+            text-align: center;
+            width: 50%;
+            /* margin: auto; */
+            /* margin-top: 50px; */
+        }
+
+        .read-more-btn:hover {
+            background: unset;
+            border: solid 2px #0075c5;
+            width: 50%;
+            transition: all 0.5s ease-in-out;
+            background-color: black;
+        }
+
+        .read_btn_position {
+            position: absolute;
+            width: 90%;
+            /* margin-top: 50px; */
+        }
+
+        /* @media (max-width: 1200px) {
+            .read_btn_position {
+                margin-top: 27px;
+                ;
+            }
+        }
+
+        @media (max-width: 1050px) {
+            .read_btn_position {
+                margin-top: 18px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .read_btn_position {
+                margin-top: 27px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .read_btn_position {
+                margin-top: -21px;
+
+            }
+        } */
+
+        .contact {
+            margin: 2px 0px !important;
+            padding: 3px 0px !important;
+        }
+
+        @media (max-width: 650px) {
+            .read-more-btn {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 550px) {
+            .header_text {
+                font-size: 20px !important;
+            }
+        }
+
+        /* @media (max-width: 500px) {
+            .row {
+                margin-left: 0;
+            }
+        } */
+
+        .Content_img {
+            width: 100%;
+            height: 425px;
+            /* padding: 10px 19px; */
+        }
+
+        .center_line {
+            padding: 88px 21px;
+            border-left: solid 2px #0075c5;
+            border-radius: 10px 0px 0px 10px;
+        }
+
+        .row_edit {
+            flex-wrap: wrap-reverse;
+        }
+
+        .center_right_line {
+            border-right: solid 2px #0075c5;
+            border-radius: 10px;
+        }
+
+        .center_left_line {
+            border-left: solid 2px #0075c5;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- this is navbar content -->
+    <div class="container-fluid mt-2">
+
+        <nav class="navbar navbar-expand-lg navbar-dark" style="padding: 2.5vw 0vw;">
+
+            <a class='navbar-brand' href='index.html'>
+                <!-- <img src="img/SD logo animation - GIF.gif" class="d-inline-block align-center navbar_brand_image"
+                    alt=""> -->
+                <a class="navbar-brand" href="index.html" style="margin-left: -47px;">
+                    <img src="img/logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top"
+                        style="font-size: 20px;">
+                    SOVEN DEVELOPER
+                </a>
+                <!-- <div class="d-flex align-center text-center navbar_brand_image ">
+                        <img style="height: 30px;" src="img/logo.png" alt="" srcset="">&nbsp;
+                         <h2 style="color: white; font-size: 19px;">SOVEN DEVLOPER</h2>
+                    </div> -->
+                <!-- Soven Developer -->
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+               <span style="color: white;"><i class="fa-solid fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse " style="text-align: center;" id="navbarNav">
+                <ul id="menu" class="navbar-nav ml-auto text-start nav_edit_home">
+                    <li class="nav-item nav_responsive">
+                        <a class="" href='index.html'>Home</a>
+                    </li>
+                    <li class="nav-item nav_responsive">
+                        <a class="" href='aboutus.html'>About Us</a>
+                    </li>
+                    <li class="nav-item nav_responsive">
+                        <a class="" href='services.html' id="th">Fields We Work In</a>
+                    </li>
+                    <li class="nav-item nav_responsive">
+                        <a class="" href='Ourexpertise.html'>Our Expertise</a>
+                    </li>
+                    <li class="nav-item nav_responsive">
+                        <a class="" href='outsourcing.html'> Service Programs</a>
+                    </li>
+                    <!-- <li class="nav-item nav_responsive">
+                        <a class="" href='technicalservices.html'> Technical Partner Service</a>
+                    </li> -->
+					<li class="nav-item nav_responsive">
+                            <a class="" href='Startupstudio.html'>Startup Studio</a>
+                        </li>
+                    <li class="nav-item nav_responsive">
+                        <a class="" href='aidevelopment.html'> AI Development & Data Service</a>
+                    </li>
+
+                    <li class="nav-item contact_btn_edit nav_responsive">
+                        <a href='contact.html'>Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- <p class="bottom_nav_line"></p> -->
+    </div>
+
+    <div class="container-fluid mt-5 mb-5" style="position: relative;">
+        <div style="text-align: -webkit-auto;">
+            <style>
+                @media screen and (max-width: 449px) and (min-width: 200px) {
+                    .bg_fite {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        text-align: center;
+                        padding: 13px 0px 0px 0px;
+                    }
+                }
+            </style>
+            <img src='img/backgroung_img.png' class="bg_fite" alt="">
+        </div>
+        <div class="row justify-content-center give">
+            <div class="col-12 col-md-9 p-4 headding_box pane">
+                <div>
+                    <div class="header_button" style="margin-bottom: 30px;">
+                        <div class="text-white sub_headding" style="border: #0075C5 solid 1px;">WHAT WE GIVE</div>
+                    </div>
+                    <h1 class="text-center headiing_page page_heading_res">Fields We Work In</h1>
+                </div>
+                <p class="mt-3 text-center intro" style="
+                        color: rgb(224, 224, 224);
+                        padding: 1vw;
+                        font-weight: 700;
+                        letter-spacing: 1px;
+                ">
+                    Welcome to Soven Developers, your gateway to success! We're here to simplify your business journey
+                    with expert services and a versatile workforce. Whether you're a startup or an established company,
+                    we've got you covered. In today's dynamic business world, finding the right talent can be a
+                    challenge. Full-time employees come with complex responsibilities and costs. We provide an
+                    alternative – outsourcing and freelancing. With us, it's all about professional, work-focused
+                    relationships. No hassle with benefits, salaries, or promotions.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content- " style="margin-top: 200px;">
+        <div class="col-12 mb-3">
+            <div class="heading">
+                <h1 class="text-center " style=" color: #fff;">Our services <span class="headiing_page" style="color: #0075C5;
+                    -webkit-text-stroke-width: 0.7px; 
+                    ">span a wide</span> spectrum, including</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- services start  -->
+    <!-- service 1 -->
+    <div class="container">
+        <style>
+            @media screen and (max-width: 777px) and (min-width: 599px) {
+                .headiing_page {
+                    font-size: 39px;
+
+                }
+
+                .heading h1 {
+                    font-size: 26px;
+                }
+            }
+
+            @media screen and (max-width: 600px) and (min-width: 450px) {
+                .headiing_page {
+                    font-size: 33px;
+
+                }
+
+                .heading h1 {
+                    font-size: 27px;
+                }
+            }
+
+            @media screen and (max-width: 449px) and (min-width: 200px) {
+                .headiing_page {
+                    font-size: 32px;
+
+                }
+
+                .heading h1 {
+                    font-size: 24px;
+                }
+            }
+        </style>
+        <div class="row justify-content-center section-content text-center">
+            <div class="col-12 col-sm-12 col-md-6 col-xl-4 mb-4 center">
+                <div class="card_body bks h-auto card_hover "
+                    style="cursor: pointer; width: 350px; height: 404px; border-radius: 12px;">
+                    <span style="filter: drop-shadow(-26px -1px 17px #45005e);"><img width="80px"
+                            style="margin-top: 24px;margin-bottom: 24px;" src="img/service_icon_1.png"
+                            alt=""></span><br>
+                    <h1 class="" style="    font-size: 28px;
+                  color: #0075c5;
+                  font-weight: 600;
+                  filter: drop-shadow(9px 12px 10px #511987);">Enterprise
+                        Application</h1>
+                    <button data-bs-toggle="modal" data-bs-target="#exampleModal1" class="service_card_btn"> <a
+                            href="enterpriseapplication.html"> Read
+                            more...</a></button>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-6 col-xl-4 mb-4 center">
+                <div class="card_body bks h-auto card_hover"
+                    style="cursor: pointer; width: 350px; height: 404px; border-radius: 12px;">
+                    <span style="filter: drop-shadow(-26px -1px 17px #45005e);"><img width="80px"
+                            style="margin-top: 24px;margin-bottom: 24px;" src="img/sercice_card_icon_2.png"
+                            alt=""></span><br>
+                    <h1 class="" style="    font-size: 28px;
+              color: #0075c5;
+              font-weight: 600;
+              filter: drop-shadow(9px 12px 10px #511987);">Website Development</h1>
+                    <button data-bs-toggle="modal" data-bs-target="#exampleModal1" class="service_card_btn"> <a
+                            href="webdevelopement.html"> Read
+                            more...</a></button>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-6 col-xl-4 mb-4 center">
+                <div class="card_body bks h-auto card_hover"
+                    style="cursor: pointer; width: 350px; height: 404px; border-radius: 12px;">
+                    <span style="filter: drop-shadow(-26px -1px 17px #45005e);"><img width="80px"
+                            style="margin-top: 24px;margin-bottom: 24px;" src="img/service_icon_3.png"
+                            alt=""></span><br>
+                    <h1 class="" style="    font-size: 28px;
+          color: #0075c5;
+          font-weight: 600;
+          filter: drop-shadow(9px 12px 10px #511987);">Application Development</h1>
+                    <button data-bs-toggle="modal" data-bs-target="#exampleModal1" class="service_card_btn"> <a
+                            href="applicationdevelopment.html"> Read
+                            more...</a></button>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-xl-4 mb-4  center">
+                <div class="card_body bks h-auto card_hover"
+                    style="cursor: pointer; width: 350px; height: 404px; border-radius: 12px;">
+                    <span style="filter: drop-shadow(-26px -1px 17px #45005e);"><img width="80px"
+                            style="margin-top: 24px;margin-bottom: 24px;" src="img/service_icon_4.png"
+                            alt=""></span><br>
+                    <h1 class="" style="    font-size: 28px;
+      color: #0075c5;
+      font-weight: 600;
+      filter: drop-shadow(9px 12px 10px #511987);">Block Chain</h1>
+                    <button data-bs-toggle="modal" data-bs-target="#exampleModal1" class="service_card_btn"> <a
+                            href="blockchain.html"> Read
+                            more...</a></button>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-xl-4 mb-4  center">
+                <div class="card_body bks h-auto card_hover"
+                    style="cursor: pointer; width: 350px; height: 404px; border-radius: 12px;">
+                    <span style="filter: drop-shadow(-26px -1px 17px #45005e);"><img width="80px"
+                            style="margin-top: 24px;margin-bottom: 24px;" src="img/service_icon_5.png"
+                            alt=""></span><br>
+                    <h1 class="" style="    font-size: 28px;
+  color: #0075c5;
+  font-weight: 600;
+  filter: drop-shadow(9px 12px 10px #511987);">Digital Marketing</h1>
+                    <button data-bs-toggle="modal" data-bs-target="#exampleModal1" class="service_card_btn"> <a
+                            href="digitalmarketing.html"> Read
+                            more...</a></button>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-xl-4 mb-4 center ">
+                <div class="card_body bks h-auto card_hover"
+                    style="cursor: pointer; width: 350px; height: 404px; border-radius: 12px;">
+                    <span style="filter: drop-shadow(-26px -1px 17px #45005e);"><img width="80px"
+                            style="margin-top: 24px;margin-bottom: 24px;" src="img/service_icon_6.png"
+                            alt=""></span><br>
+                    <h1 class="" style="    font-size: 28px;
+  color: #0075c5;
+  font-weight: 600;
+  filter: drop-shadow(9px 12px 10px #511987);">Artificial Intelligence</h1>
+                    <button data-bs-toggle="modal" data-bs-target="#exampleModal1" class="service_card_btn"> <a
+                            href="artificialintelligence.html"> Read
+                            more...</a></button>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-xl-4 mb-4  center">
+                <div class="card_body bks h-auto card_hover"
+                    style="cursor: pointer; width: 350px; height: 404px; border-radius: 12px;">
+                    <span style="filter: drop-shadow(-26px -1px 17px #45005e);"><img width="80px"
+                            style="margin-top: 24px;margin-bottom: 24px;" src="img/service_icon_7.png"
+                            alt=""></span><br>
+                    <h1 class="" style="    font-size: 28px;
+  color: #0075c5;
+  font-weight: 600;
+  filter: drop-shadow(9px 12px 10px #511987);">Cloud</h1>
+                    <button data-bs-toggle="modal" data-bs-target="#exampleModal1" class="service_card_btn"> <a
+                            href="cloud.html"> Read
+                            more...</a></button>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-xl-4 mb-4  center">
+                <div class="card_body bks h-auto card_hover"
+                    style="cursor: pointer; width: 350px; height: 404px; border-radius: 12px;">
+                    <span style="filter: drop-shadow(-26px -1px 17px #45005e);"><img width="80px"
+                            style="margin-top: 24px;margin-bottom: 24px;" src="img/service_icon_8.png"
+                            alt=""></span><br>
+                    <h1 class="" style="    font-size: 28px;
+  color: #0075c5;
+  font-weight: 600;
+  filter: drop-shadow(9px 12px 10px #511987);">Cyber Security</h1>
+                    <button data-bs-toggle="modal" data-bs-target="#exampleModal1" class="service_card_btn"> <a
+                            href="cybersecurity.html"> Read
+                            more...</a></button>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-xl-4 mb-4  center">
+                <div class="card_body bks h-auto card_hover"
+                    style="cursor: pointer; width: 350px; height: 404px; border-radius: 12px;">
+                    <span style="filter: drop-shadow(-26px -1px 17px #45005e);"><img width="80px"
+                            style="margin-top: 24px;margin-bottom: 24px;" src="img/service_icon_9.png"
+                            alt=""></span><br>
+                    <h1 class="" style="    font-size: 28px;
+  color: #0075c5;
+  font-weight: 600;
+  filter: drop-shadow(9px 12px 10px #511987);">
+                        Data Analysis</h1>
+                    <button data-bs-toggle="modal" data-bs-target="#exampleModal1" class="service_card_btn"> <a
+                            href="dataanalysis.html"> Read
+                            more...</a></button>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-xl-4 mb-4  center">
+                <div class="card_body bks h-auto card_hover"
+                    style="cursor: pointer; width: 350px; height: 404px; border-radius: 12px;">
+                    <span style="filter: drop-shadow(-26px -1px 17px #45005e);"><img width="80px"
+                            style="margin-top: 24px;margin-bottom: 24px;" src="img/service_icon_10.png"
+                            alt=""></span><br>
+                    <h1 class="" style="    font-size: 28px;
+  color: #0075c5;
+  font-weight: 600;
+  filter: drop-shadow(9px 12px 10px #511987);">RAP</h1>
+                    <button data-bs-toggle="modal" data-bs-target="#exampleModal1" class="service_card_btn"> <a
+                            href="rap.html"> Read
+                            more...</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal start  -->
+
+
+
+    <!-- modal service 2  -->
+    <div class="modal top fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+        data-mdb-backdrop="true" data-mdb-keyboard="true">
+        <div class="modal-dialog modal-fullscreen" style="max-width: 100%;margin: auto;">
+            <div class="modal-content">
+
+                <div class="modal-body " id="highlight-table2"
+                    style="background-color: black; height: auto; width: 100%; padding: 3vw 4vw;   border: 2px solid #0073c2;">
+                    <button class="btn-close close-button-popup" data-bs-dismiss="modal" aria-label="Close"><i
+                            class="fa-solid fa-xmark"></i></button>
+
+                    <!-- contant start  -->
+
+                    <div class="modal-body popup_edit">
+
+                        <div class='ser-des'>
+                            <div class="col-12 card-title">
+                                <h3 style='text-align: center;color: #005691;'>Web Development</h3>
+                            </div><br>
+                            <div style=' margin-top: 24px;' class='row row_edit row_hover2 '>
+                                <div class='col-lg center_right_line'>
+                                    <div class='col-sm-12'>
+                                        <div style='    padding: 0px 0px;' class='row card '>
+                                            <div class='card-body'>
+                                                <p> Welcome to our professional web design
+                                                    and development services tailored to
+                                                    enhance your online presence and drive
+                                                    business growth. We offer affordable
+                                                    rates to assist your business in
+                                                    attracting and retaining visitors while
+                                                    converting them into loyal customers.
+                                                    Our approach integrates beautiful design
+                                                    with a comprehensive strategy aimed at
+                                                    maximizing user engagement and
+                                                    conversions. Research indicates that up
+                                                    to 82% of customers conduct online
+                                                    research before making contact regarding
+                                                    products or services. Is your website
+                                                    optimized to convert these researchers
+                                                    into buyers? A professional, visually
+                                                    appealing, and functional website is
+                                                    crucial in today's competitive
+                                                    landscape, and we are here to help you
+                                                    achieve just that.</p>
+                                                <p>In the contemporary digital landscape,
+                                                    businesses are increasingly embracing
+                                                    technologies and innovations that foster
+                                                    intelligence, data-centricity, and
+                                                    interconnectedness within their
+                                                    organizations. Our mission is to empower
+                                                    our clients by instilling new dimensions
+                                                    of innovation and business value
+                                                    throughout the entirety of their digital
+                                                    value chain.</p>
+                                            </div>
+                                        </div>
+                                        <div class='overlay'></div>
+                                    </div>
+                                </div>
+                                <div class='col-lg'>
+                                    <div>
+                                        <img class='Content_img img_border' src='img/service_popup_2.1.gif' alt=''>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style='margin-top: 72px;' class='row row_hover2'>
+                                <div class='col-lg'>
+                                    <div>
+                                        <img class='Content_img img_border' src='img/service_popup_2.2.gif' alt=''>
+                                    </div>
+                                </div>
+                                <div class='col-lg center_left_line'>
+                                    <div class='col-sm-12'>
+                                        <div style='padding: 0px 0px;' class='row card '>
+                                            <div class='card-body'>
+                                                <h2>Key Elements of Web Design and
+                                                    Development</h2>
+                                                <p>In the dynamic digital landscape, a
+                                                    strong online presence is essential. Are
+                                                    you aware of the critical elements your
+                                                    website needs to excel in both design
+                                                    and development? The internet's
+                                                    explosive growth necessitates a
+                                                    well-designed and fully functional
+                                                    website. Here are some vital
+                                                    considerations for your web development
+                                                    project:</p>
+                                                <li><span style='color:#0075C5'> Design
+                                                        Excellence:</span>
+                                                    <p> Our design
+                                                        philosophy revolves around simplicity,
+                                                        making it suitable for any website.</p>
+                                                </li>
+                                                <li> <span style='color:#0075C5'>Consistency:</span>
+                                                    <p>
+                                                        Maintaining a cohesive look and feel across
+                                                        your website is crucial for a professional
+                                                        image.</p>
+                                                </li>
+                                            </div>
+                                            <div class='overlay'></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div style='  margin-top: 72px;' class='row row_edit '>
+                                    <div class='col-lg center_right_line'>
+                                        <div class='col-sm-12'>
+                                            <div style='    padding: 0px 0px;' class='row card '>
+                                                <div class='card-body' style="height: 500px;">
+                                                    <li><span style='color:#0075C5'>Mobile
+                                                            Responsiveness:</span>
+                                                        <p> With the
+                                                            increasing dominance of mobile devices,
+                                                            we prioritize ensuring your website is
+                                                            fully responsive and compatible with
+                                                            smartphones, tablets, and other devices.</p>
+
+                                                    </li>
+                                                    <li><span style='color:#0075C5'>Web
+                                                            Development Expertise:</span>
+                                                        <p> Our
+                                                            services extend beyond design,
+                                                            encompassing comprehensive web
+                                                            development, catering to projects of
+                                                            varying scales.</p>
+                                                    </li>
+                                                    <li>
+                                                        <span style='color:#0075C5'>Dynamic
+                                                            SaaS Web Development:</span>
+                                                        <p>
+                                                            Additionally, our expertise includes
+                                                            crafting dynamic Software as a Service
+                                                            (SaaS) solutions, delivering flexible
+                                                            and scalable web applications tailored
+                                                            to your business needs. </p>
+                                                    </li>
+                                                    <p> we're dedicated to providing
+                                                        exceptional services that elevate your
+                                                        online presence and drive success for
+                                                        your business.</p>
+
+                                                </div>
+                                            </div>
+                                            <!-- <div class='overlay'></div> -->
+                                        </div>
+                                    </div>
+                                    <div class='col-lg'>
+                                        <div>
+                                            <img class='Content_img img_border' src='img/service_popup_2.3.gif' alt=''>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <!-- contant end  -->
+                        </div>
+                        <div style="margin-top: 200px;">
+                            <h2 style="    font-size: 30px;
+font-weight: 700;">We specialize in developing:</h2>
+                            <div class="row">
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 50px;" src="img/Ecommerce Websites.png" alt=""
+                                            srcset=""></span>
+                                    <p style="margin-top: 10px;">Ecommerce Websites</p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 50px;" src="img/service_card_icon_2.2.png" alt=""
+                                            srcset=""></span>
+                                    <p style="margin-top: 10px;">Static Websites</p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 50px;" src="img/service_card_icon_2.3.png" alt=""
+                                            srcset=""></span>
+                                    <p style="margin-top: 10px;">Content Management Systems (CMS)</p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 50px;" src="img/service_card_icon_2.4.png" alt=""
+                                            srcset=""></span>
+                                    <p style="margin-top: 10px;">Landing Pages</p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 50px;" src="img/service_card_icon_2.5.png" alt=""
+                                            srcset=""></span>
+                                    <p style="margin-top: 10px;">Landing Pages</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h2 style="    font-size: 30px;
+font-weight: 700;">Technologies We Work With:</h2>
+                            <div class="row">
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/javascript(node).png" alt=""
+                                            srcset=""></span>
+                                    <p style="margin-top: 10px;">JavaScript (ES6+)</p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/TypeScript.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;">TypeScript</p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/python.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;">Python</p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/Ruby.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;">Ruby</p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/php.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;">PHP</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/go.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;">Go (Golang)</p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/Rust.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;">Rust</p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/Kotlin.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;">Kotlin</p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/Swift.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;">Swift </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/HTML5.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;">HTML5</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/CSS3.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;">CSS3</p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 100px;" src="img/SQL.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;">SQL</p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 100px;" src="img/GraphQL.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;">GraphQL</p>
+                                </div>
+                            </div>
+                        </div><br>
+                        <button style="margin-top: 20px;" data-bs-dismiss="modal" aria-label="Close"
+                            class="view-less-btn">View Less</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        /* styles.css */
+        .row_hover3 {
+            opacity: 0.3;
+        }
+
+        .highlighted {
+            /* background-color: yellow; */
+            opacity: 1;
+        }
+    </style>
+    <script>
+        // script.js
+        document.addEventListener('DOMContentLoaded', () => {
+            const rows = document.querySelectorAll('#highlight-table3 .row_hover3');
+            let currentIndex = 0;
+            let intervalId;
+            let isMouseOver = false;
+
+            // Function to highlight rows one by one
+            const highlightRowsSequentially = () => {
+                if (!isMouseOver) {
+                    rows.forEach((row, index) => {
+                        if (index === currentIndex) {
+                            row.classList.add('highlighted');
+                        } else {
+                            row.classList.remove('highlighted');
+                        }
+                    });
+                    currentIndex = (currentIndex + 1) % rows.length;
+                }
+            };
+
+            // Start the sequential highlighting with an interval
+            const startHighlighting = () => {
+                intervalId = setInterval(highlightRowsSequentially, 1000); // Change the interval as needed
+            };
+
+            // Stop the sequential highlighting
+            const stopHighlighting = () => {
+                clearInterval(intervalId);
+            };
+
+            // Add event listeners for mouseover effect
+            rows.forEach(row => {
+                row.addEventListener('mouseover', () => {
+                    isMouseOver = true;
+                    row.classList.add('highlighted');
+                    stopHighlighting();
+                });
+                row.addEventListener('mouseout', () => {
+                    isMouseOver = false;
+                    row.classList.remove('highlighted');
+                    startHighlighting();
+                });
+            });
+
+            // Handle visibility change to stop and start highlighting based on tab visibility
+            document.addEventListener('visibilitychange', () => {
+                if (document.hidden) {
+                    stopHighlighting();
+                } else {
+                    startHighlighting();
+                }
+            });
+
+            // Initial start of the highlighting
+            startHighlighting();
+        });
+
+    </script>
+    <!-- modal service 3  -->
+    <div class="modal top fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+        data-mdb-backdrop="true" data-mdb-keyboard="true">
+        <div class="modal-dialog modal-fullscreen" style="max-width: 100%;margin: auto;">
+            <div class="modal-content">
+
+                <div class="modal-body " id="highlight-table3"
+                    style="background-color: black; height: auto; width: 100%; padding: 3vw 4vw;   border: 2px solid #0073c2;">
+                    <button class="btn-close close-button-popup" data-bs-dismiss="modal" aria-label="Close"><i
+                            class="fa-solid fa-xmark"></i></button>
+
+                    <!-- contant start  -->
+
+                    <div class="modal-body popup_edit">
+
+                        <div class='ser-des'>
+                            <div class="col-12 card-title">
+                                <h3 style='text-align: center;'>Mobile App Development
+                                </h3>
+                            </div><br>
+
+
+                            <div style=' overflow-x: hidden;   margin-top: 24px;' class='row row_edit row_hover3'>
+                                <div class='col-lg center_right_line'>
+                                    <div class='col-sm-12'>
+                                        <div style='    padding: 0px 0px;' class='row card '>
+                                            <div class='card-body'>
+                                                <p>At Soven Developer, we specialize in
+                                                    crafting tailored mobile
+                                                    applications
+                                                    that cater to your unique business
+                                                    requirements. Our expertise spans
+                                                    across
+                                                    both Android and iOS platforms,
+                                                    ensuring
+                                                    a seamless user experience and
+                                                    robust
+                                                    functionality across diverse
+                                                    devices,
+                                                    including smartphones, tablets,
+                                                    wearables, and smart TVs.</p>
+                                                <li><b style='color:#0075C5'>End-to-End
+                                                        Mobility Solutions:</b> From
+                                                    conceptualization to deployment, we
+                                                    offer complete mobile app design and
+                                                    development services, encompassing
+                                                    user
+                                                    interface design, technology stack
+                                                    selection, front-end development,
+                                                    third-party integration, and ongoing
+                                                    support.</li>
+                                                <li><b style='color:#0075C5'>calability
+                                                        and
+                                                        Performance</b>: Leveraging
+                                                    proven
+                                                    technologies and scalable
+                                                    approaches, we
+                                                    enable rapid application scaling and
+                                                    extension to meet evolving business
+                                                    needs efficiently.</li>
+                                            </div>
+                                        </div>
+                                        <div class='overlay'></div>
+                                    </div>
+                                </div>
+                                <div class='col-lg'>
+                                    <div>
+                                        <img class='Content_img img_border'
+                                            src='https://digitalroar.ae/img/mobile-app-development.gif' alt=''>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style=' overflow-x: hidden;   margin-top: 24px;' class='row row_hover3'>
+                                <div class='col-lg'>
+                                    <div>
+                                        <img class='Content_img img_border' src='img/service_popup_3.2.gif' alt=''>
+                                    </div>
+                                </div>
+                                <div class='col-lg center_left_line'>
+                                    <div class='col-sm-12'>
+                                        <div style='padding: 0px 0px;' class='row card '>
+                                            <div class='card-body'>
+                                                <li><b style='color:#0075C5'>Quality
+                                                        Assurance and Updates</b>: Our
+                                                    rigorous testing practices guarantee
+                                                    bug-free, fully functional apps that
+                                                    are
+                                                    regularly updated to align with the
+                                                    latest OS versions and performance
+                                                    enhancements.</li>
+                                                <li><b style='color:#0075C5'>IPR
+                                                        Protection</b>: We maintain a
+                                                    pristine track record in
+                                                    Intellectual
+                                                    Property Rights (IPR) and source
+                                                    code
+                                                    protection, ensuring the
+                                                    confidentiality
+                                                    and security of your app's assets.
+                                                </li>
+                                                <li><b style='color:#0075C5'>Time-to-Market
+                                                        Excellence</b>: Our experienced
+                                                    teams expedite development, ensuring
+                                                    superior time-to-market and
+                                                    time-to-service records, meeting
+                                                    your
+                                                    project timelines effectively.</li>
+                                                <li><b style='color:#0075C5'>Flexible
+                                                        Engagement Models</b>: We offer
+                                                    adaptable engagement models,
+                                                    including
+                                                    fixed-cost projects, full-time or
+                                                    part-time hiring, and hourly
+                                                    developer
+                                                    rates to suit your project
+                                                    requirements.
+                                                </li>
+                                            </div>
+                                            <div class='overlay'></div>
+                                        </div>
+                                    </div>
+                                </div><br />
+
+                                <div class='container-fluid service_mobile_app_modal_responsive '>
+                                    <h3><b style='color:#0075C5;font-size:20px;'><br>Android
+                                            & iOS Development Expertise</b></h3><br>
+                                    <div class='row justify-content-center'>
+                                        <div class='col-12 col-sm-12 col-md-6 col-lg-4 mb-4 spcl'>
+                                            <div class='bks p-3 ' style='height:auto; overflow:scroll'>
+                                                <b style='color:#0075C5'>Android
+                                                    Development
+                                                    Highlights</b> :<br>
+                                                <ul style='margin:30px'>
+                                                    <li>
+                                                        Scalable infrastructure support
+                                                        tailored to your growth needs.
+                                                    </li>
+                                                    <li> Cost-effective solutions with
+                                                        superior Return on Investment
+                                                        (ROI).
+                                                    </li>
+                                                    <li>Expertise in feature-rich,
+                                                        intuitive
+                                                        application development across
+                                                        various Android devices.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class='col-12 col-sm-12 col-md-6 col-lg-4 mb-4 spcl'>
+                                            <div class='bks p-3 ' style='height:auto;overflow:scroll'>
+                                                <b style='color:#0075C5'>iOS Development
+                                                    Highlights:</b><br>
+                                                <ul style='margin:30px'>
+                                                    <li>Innovative 'Apple' lab dedicated
+                                                        to
+                                                        crafting elegant, feature-rich
+                                                        iOS
+                                                        applications.</li>
+                                                    <li> Proficiency in Swift &
+                                                        Objective-C,
+                                                        latest Apple updates, and device
+                                                        generations.</li>
+                                                    <li> User-centric design,
+                                                        multi-threading, advanced
+                                                        algorithms, and top-tier QA
+                                                        practices for robust iOS apps.
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class='col-12 col-sm-12 col-md-6 col-lg-4 mb-4 spcl'>
+                                            <div class='bks p-3 ' style='height:auto;overflow:scroll'>
+                                                <b style='color:#0075C5'>Conclusion</b><br>
+                                                <p style='margin:30px'>With a focus on
+                                                    user
+                                                    experience, scalability, and
+                                                    cutting-edge technology, Rishabh
+                                                    Software delivers excellence in
+                                                    Android
+                                                    and iOS app development. Partner
+                                                    with us
+                                                    to transform your vision into a
+                                                    compelling and high-performing
+                                                    mobile
+                                                    application, ensuring your business
+                                                    stands out in the digital landscape.
+                                                <p>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+                                    <!-- contant end  -->
+                                </div>
+
+                            </div>
+
+                            <!-- contant end  -->
+                        </div>
+
+                        <div style="">
+                            <h2 style="    font-size: 30px;
+font-weight: 700;">We specialize in developing:</h2>
+                            <div class="row">
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 62px;" src="img/Andriod.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;">Andriod </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 115px;" src="img/iOS.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;">iOS</p>
+                                </div>
+                            </div>
+                            <h2 style="    font-size: 30px;
+                font-weight: 700;">Technologies we work with:</h2>
+                            <div class="row">
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 50px;" src="img/Kotlin.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;">Kotlin </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 100px;" src="img/Swift.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;">Swift</p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 92px;" src="img/Flutter.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;">Flutter (Dart)</p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 50px;" src="img/React Native.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;">React Native (JavaScript/TypeScript)</p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 50px;" src="img/java.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;">Java</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 50px;" src="img/Objective-C.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;">Objective-C </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 50px;" src="img/c_icon.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;">C# (Xamarin)</p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 50px;" src="img/python.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;">Python (Kivy)</p>
+                                </div>
+                            </div>
+                        </div><br>
+                        <button style="margin-top: 20px;" data-bs-dismiss="modal" aria-label="Close"
+                            class="view-less-btn">View
+                            Less</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- modal service 4 -->
+    <div class="modal top fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+        data-mdb-backdrop="true" data-mdb-keyboard="true">
+        <div class="modal-dialog modal-fullscreen" style="max-width: 100%;margin: auto;">
+            <div class="modal-content">
+
+                <div class="modal-body " id="highlight-table4"
+                    style="background-color: black; height: auto; width: 100%; padding: 3vw 4vw;   border: 2px solid #0073c2;">
+                    <button class="btn-close close-button-popup" data-bs-dismiss="modal" aria-label="Close"><i
+                            class="fa-solid fa-xmark"></i></button>
+
+                    <!-- contant start  -->
+                    <div class="modal-body popup_edit">
+                        <div class='ser-des' style='text-align:justify'>
+
+                            <div style=' overflow-x: hidden;   margin-top: 24px;' class='row row_edit row_hover4'>\
+
+                                <div class='col-lg center_right_line'>
+                                    <div class='col-sm-12'>
+                                        <div style='    padding: 0px 0px;' class='row card '>
+                                            <div class='card-body'>
+                                                <p>The landscape of business will be built upon
+                                                    the internet of value. Global markets are
+                                                    witnessing the emergence of a new
+                                                    stakeholder, termed the 'prosumer,' blurring
+                                                    the traditional lines between producers and
+                                                    consumers across various industries. A novel
+                                                    asset class, 'data,' is fundamentally
+                                                    revolutionizing how value is generated,
+                                                    acquired, and disseminated.</p>
+                                                <p>These overarching trends are paving the path
+                                                    for future business disruptions. Blockchain
+                                                    and Distributed Ledger Technologies (DLTs)
+                                                    will empower enterprises to reshape market
+                                                    dynamics across suppliers, consumers,
+                                                    newcomers, governments, and regulatory
+                                                    bodies.</p>
+                                            </div>
+                                        </div>
+                                        <div class='overlay'></div>
+                                    </div>
+                                </div>
+                                <div class='col-lg'>
+                                    <div>
+                                        <img class='Content_img img_border'
+                                            src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkHr8MeTdOR4fJSPXv-xBIqIdAEqoWFCXN_ODeX-Xo2q15WYAB'
+                                            alt=''>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p style='    font-size: 27px;' class='headding_text'> The Potential
+                                of Blockchain</p><br />
+                            <div style=' overflow-x: hidden;   margin-top: 24px;' class='row row_hover4'>
+                                <div class='col-lg'>
+                                    <div>
+                                        <img class='Content_img img_border' src='img/sub_popup_6.2.gif' alt=''>
+                                    </div>
+                                </div>
+                                <div class='col-lg center_left_line'>
+                                    <div class='col-sm-12'>
+                                        <div style='padding: 0px 0px;' class='row card '>
+                                            <div class='card-body'>
+                                                <p>Sustainability for the Environment |
+                                                    Sustainability for People | Sustainability
+                                                    for Business
+                                                <p>Amidst the ever-evolving global economic and
+                                                    geopolitical landscapes, the overarching
+                                                    theme that defines the potential values
+                                                    derived from blockchain technology is
+                                                    'Sustainability.' Blockchain offers
+                                                    sustainability benefits for the environment,
+                                                    individuals (both producers and consumers),
+                                                    and businesses. When harnessed effectively,
+                                                    blockchain has the capacity to establish a
+                                                    more equitable economy and foster stability
+                                                    in markets and governance. It should not be
+                                                    seen merely as a technology for replacement,
+                                                    but as a foundational force integrated with
+                                                    modern digital technologies like AI, ML, and
+                                                    IoT.</p>
+                                            </div>
+                                            <div class='overlay'></div>
+                                        </div>
+                                    </div>
+                                </div><br />
+                            </div>
+                            <div style=' overflow-x: hidden;   margin-top: 24px;' class='row row_edit row_hover4 '>
+                                <div class='col-lg center_right_line'>
+                                    <div class='col-sm-12'>
+                                        <div style='    padding: 0px 0px;' class='row card '>
+                                            <div class='card-body'>
+                                                <p style=' font-size: 27px; color: #0075c5;' class='headding_text'>
+                                                    Our Approach to
+                                                    Propel Blockchain Adoption</p>
+                                                <p>Identification and Resolution of
+                                                    Challenges
+                                                    At Soven Developer, our ethos revolves
+                                                    around empowering business leaders with
+                                                    the necessary tools to shape the future
+                                                    of business. The primary challenge lies
+                                                    in identifying pertinent business issues
+                                                    and correlating them within specific
+                                                    markets or industries.</p>
+                                            </div>
+                                        </div>
+                                        <div class='overlay'></div>
+                                    </div>
+                                </div>
+                                <div class='col-lg'>
+                                    <div>
+                                        <img class='Content_img img_border' src='img/sub_popup_6.3.gif' alt=''>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style=' overflow-x: hidden;   margin-top: 24px;' class='row row_hover4 '>
+                                <div class='col-lg'>
+                                    <div>
+                                        <img class='Content_img img_border' src='img/sub_popup_6.4.gif' alt=''>
+                                    </div>
+                                </div>
+                                <div class='col-lg center_left_line'>
+                                    <div class='col-sm-12'>
+                                        <div style='padding: 0px 0px;' class='row card '>
+                                            <div class='card-body'>
+                                                <p style=' font-size: 27px; color: #0075c5;' class='headding_text'>
+                                                    Equitable
+                                                    Distribution of Business Value across
+                                                    Ecosystems</p>
+                                                <p>To encourage key stakeholders'
+                                                    participation, it is crucial to ensure
+                                                    the equitable distribution of business
+                                                    value across the ecosystem,
+                                                    demonstrating the specific benefits
+                                                    blockchain offers to each stakeholder.
+                                                </p>
+                                            </div>
+                                            <div class='overlay'></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div style='overflow-x: hidden;    margin-top: 24px;' class='row row_edit '>
+                                    <div class='col-lg center_right_line'>
+                                        <div class='col-sm-12'>
+                                            <div style='padding: 0px 0px;' class='row card'>
+                                                <div class='col-12 card-body'>
+                                                    <p style=' font-size: 27px; color: #0075c5;' class='headding_text'>
+                                                        Moving Beyond
+                                                        Proof-of-Concepts to
+                                                        Proof-of-Business</p>
+                                                    <p>Soven Developer strategically aligns
+                                                        investments, partnerships, and
+                                                        solutions to streamline the process
+                                                        of establishing proof-of-business
+                                                        and fostering broader adoption of
+                                                        blockchain. We have developed
+                                                        well-defined IP-based products,
+                                                        service-oriented solutions, and
+                                                        solution accelerators focusing on
+                                                        four high-impact domains: financial
+                                                        services, insurance, supply chains,
+                                                        and government services. These tools
+                                                        are designed not just to test
+                                                        technology but to assist clients in
+                                                        testing business models effectively.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='col-lg '>
+                                        <div>
+                                            <img class='Content_img img_border' src='img/sub_popup_6.5.png' alt=''>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h2 style="    font-size: 30px;
+font-weight: 700;">We specialize in developing:</h2>
+                        <div class="row">
+                            <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                <span><img style="width: 75px;" src="img/Decentralized Applications (DApps).png" alt=""
+                                        srcset=""></span>
+                                <p style="margin-top: 10px;color: white;">Decentralized Applications (DApps) </p>
+                            </div>
+                            <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                <span><img style="width: 75px;" src="img/Blockchain Integration.png" alt=""
+                                        srcset=""></span>
+                                <p style="margin-top: 10px;color: white;">Blockchain Integration </p>
+                            </div>
+                            <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                <span><img style="width: 75px;" src="img/Tokenization.png" alt="" srcset=""></span>
+                                <p style="margin-top: 10px;color: white;">Tokenization </p>
+                            </div>
+                            <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                <span><img style="width: 100px;" src="img/Blockchain Security.png" alt=""
+                                        srcset=""></span>
+                                <p style="margin-top: 10px;color: white;">Blockchain Security </p>
+                            </div>
+                            <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                <span><img style="width: 75px;" src="img/Hyperledger Development.png" alt=""
+                                        srcset=""></span>
+                                <p style="margin-top: 10px;color: white;"> Hyperledger Development </p>
+                            </div>
+                        </div>
+                    </div><br>
+                    <button style="margin-top: 20px;" data-bs-dismiss="modal" aria-label="Close"
+                        class="view-less-btn">View Less</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- modal service 5  -->
+    <div class="modal top fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+        data-mdb-backdrop="true" data-mdb-keyboard="true">
+        <div class="modal-dialog modal-fullscreen" style="max-width: 100%;margin: auto;">
+            <div class="modal-content">
+
+                <div class="modal-body " id="highlight-table5"
+                    style="background-color: black; height: auto; width: 100%; padding: 3vw 4vw;   border: 2px solid #0073c2;">
+                    <button class="btn-close close-button-popup" data-bs-dismiss="modal" aria-label="Close"><i
+                            class="fa-solid fa-xmark"></i></button>
+                    <!-- contant start  -->
+
+                    <div class='ser-des'>
+
+                        <div style=' overflow-x: hidden;   margin-top: 24px;' class='row row_edit  row_hover5 '>
+                            <div class='col-lg center_right_line'>
+                                <div class='col-sm-12'>
+                                    <div style='    padding: 0px 0px;' class='row card '>
+                                        <div class='card-body'>
+                                            <p>Soven Developer's prowess in Digital
+                                                Marketing enables enterprises to establish
+                                                profound connections with customers through
+                                                tailored experiences. Our methodology
+                                                facilitates the delivery of pertinent
+                                                content, drives data-informed
+                                                decision-making, and executes highly
+                                                personalized campaign management strategies,
+                                                consequently boosting customer wallet share.
+                                            </p>
+                                            <p>Our team comprises strategists, creative
+                                                minds, designers, writers, media experts,
+                                                digital marketers, developers, and
+                                                relationship cultivators. We dedicate
+                                                ourselves to crafting dynamic and pertinent
+                                                brand encounters across all dimensions.</p>
+                                        </div>
+                                    </div>
+                                    <div class='overlay'></div>
+                                </div>
+                            </div>
+                            <div class='col-lg'>
+                                <div>
+                                    <img class='Content_img img_border' src='img/service_popup_4.1.jpg' alt=''>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style=' overflow-x: hidden;   margin-top: 24px;' class='row row_hover5 '>
+                            <div class='col-lg'>
+                                <div>
+                                    <img class='Content_img img_border' src='img/service_popup_4.2.jpg' alt=''>
+                                </div>
+                            </div>
+                            <div class='col-lg center_left_line'>
+                                <div class='col-sm-12'>
+                                    <div style='padding: 0px 0px;' class='row card '>
+                                        <div class='card-body'>
+                                            <p>Utilizing the extensive spectrum of Soven
+                                                Developer's capabilities in digital
+                                                strategy, design, and technology situates us
+                                                at critical crossroads. Here, we extract
+                                                insights, shape interactions, foster
+                                                integration, and ignite innovation, ensuring
+                                                the customer journey remains central to all
+                                                our initiatives.</p>
+                                            <li> Digital agility</li>
+                                            <li> Organizational design for the digital
+                                                landscape</li>
+                                            <li>Crafting bespoke digital strategies</li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style=' overflow-x: hidden;   margin-top: 24px;' class='row row_edit row_hover5 '>
+                            <div class='col-lg center_right_line'>
+                                <div class='col-sm-12'>
+                                    <div style='    padding: 0px 0px;' class='row card '>
+                                        <div class='card-body'>
+                                            <p> Leveraging the diverse array of
+                                                design capabilities at Soven
+                                                Developer in strategy, design,
+                                                and technology places us at
+                                                pivotal intersections. Here, we
+                                                draw insights, mold
+                                                interactions, foster
+                                                integration, and spark
+                                                innovation, always keeping the
+                                                customer journey as our focal
+                                                point.</p>
+                                            <li> Brand identity creation</li>
+                                            <li>Innovating through strategic
+                                                design</li>
+                                            <li> Crafting interactive
+                                                experiences</li>
+                                            <li> Product conceptualization and
+                                                design</li>
+                                            <li> Service enhancement through
+                                                design</li>
+                                            <li>User-centric experience (UX)
+                                            </li>
+                                            <li> Conducting user-centric
+                                                research</li>
+                                        </div>
+                                    </div>
+                                    <div class='overlay'></div>
+                                </div>
+                            </div>
+                            <div class='col-lg'>
+                                <div>
+                                    <img class='Content_img img_border' src='img/service_popup_4.3.jpg' alt=''>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style=' overflow-x: hidden;   margin-top: 24px;' class='row row_hover5 '>
+                            <div class='col-lg'>
+                                <div>
+                                    <img class='Content_img img_border' src='img/service_popup_4.4.gif' alt=''>
+                                </div>
+                            </div>
+                            <div class='col-lg center_left_line'>
+                                <div class='col-sm-12'>
+                                    <div style='padding: 0px 0px;' class='row card '>
+                                        <div class='card-body'>
+                                            <p>Harnessing the comprehensive
+                                                range of technological expertise
+                                                at Soven Developer in strategy,
+                                                design, and technology situates
+                                                us at critical crossroads. Here,
+                                                we extract insights, shape
+                                                interactions, foster
+                                                integration, and ignite
+                                                innovation, always with a focus
+                                                on the customer journey.</p>
+                                            <li> Architecting digital solutions
+                                            </li>
+                                            <li> Managing digital assets
+                                                effectively</li>
+                                            <li> Engineering digital solutions
+                                            </li>
+                                            <li> Optimizing enterprise
+                                                operations digitally</li>
+                                            <li>Building platforms & tailored
+                                                solutions</li>
+                                        </div>
+                                        <div class='overlay'></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <button style="margin-top: 20px;" data-bs-dismiss="modal" aria-label="Close"
+                        class="view-less-btn">View Less</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- modal service 6 -->
+
+
+
+    <div class="modal top fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+        data-mdb-backdrop="true" data-mdb-keyboard="true">
+        <div class="modal-dialog modal-fullscreen" style="max-width: 100%;margin: auto;">
+            <div class="modal-content">
+
+                <div class="modal-body "
+                    style="background-color: black; height: auto; width: 100%; padding: 3vw 4vw;   border: 2px solid #0073c2;">
+                    <button class="btn-close close-button-popup" data-bs-dismiss="modal" aria-label="Close"><i
+                            class="fa-solid fa-xmark"></i></button>
+
+                    <!-- contant start  -->
+                    <div class="modal-body popup_edit">
+
+                        <div class='ser-des' id="highlight-table6">
+
+                            <div style=' overflow-x: hidden;   margin-top: 24px;' class='row row_edit row_hover6 '>
+                                <div class='col-lg center_right_line'>
+                                    <div class='col-sm-12'>
+                                        <div style='    padding: 0px 0px;' class='row card '>
+                                            <div class='card-body'>
+                                                <p>The transformative influence of generative
+                                                    AI, alongside a cloud foundation, is
+                                                    fundamentally altering the business
+                                                    landscape. Future opportunities will drive
+                                                    businesses to be more connected,
+                                                    intelligent, and autonomous, fostering a
+                                                    digital network of enterprises collaborating
+                                                    to deliver value to end consumers, citizens,
+                                                    and customers through a strategically
+                                                    designed symbiotic and cooperative
+                                                    ecosystem.</p>
+                                                <p>AI plays a pivotal role in revolutionizing
+                                                    traditional business operations, fostering
+                                                    innovative business models. Soven
+                                                    Developer's AI services empower
+                                                    organizations to augment the customers’
+                                                    journey, offering more adaptable and
+                                                    user-friendly procedures.</p>
+                                            </div>
+                                        </div>
+                                        <div class='overlay'></div>
+                                    </div>
+                                </div>
+                                <div class='col-lg'>
+                                    <div>
+                                        <img class='Content_img img_border'
+                                            src='https://nebula-stag.s3.amazonaws.com/uploads/connect/image/98/ai-1.gif'
+                                            alt=''>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style=' overflow-x: hidden;   margin-top: 24px;' class='row row_hover6 '>
+                                <div class='col-lg'>
+                                    <div>
+                                        <img class='Content_img img_border' src='img/service_popup_5.1.gif' alt=''>
+                                    </div>
+                                </div>
+                                <div class='col-lg center_left_line'>
+                                    <div class='col-sm-12'>
+                                        <div style='padding: 0px 0px;' class='row card '>
+                                            <div class='card-body'>
+                                                <p>Our services enable organizations to harness
+                                                    the potential of data and analytics,
+                                                    fostering the creation of novel business
+                                                    models and revenue streams, all while
+                                                    prioritizing data security, quality, and
+                                                    compliance with regulations. Supported by
+                                                    technologies like cloud computing, Internet
+                                                    of Things (IoT), Artificial Intelligence
+                                                    (AI), Machine Learning (ML), and advanced
+                                                    analytics, our solutions enrich
+                                                    decision-making capabilities, facilitating
+                                                    augmented intelligence and process
+                                                    automation. Moreover, Soven Developer's
+                                                    crowd-powered consulting aids in securing
+                                                    innovation and scaling programs to achieve
+                                                    tangible outcomes.</p>
+                                            </div>
+                                            <div class='overlay'></div>
+                                        </div>
+                                    </div>
+                                </div><br />
+                            </div>
+
+                            <div style=' overflow-x: hidden;   margin-top: 24px;' class='row row_edit row_hover6 '>
+                                <div class='col-lg center_right_line'>
+                                    <p style='    font-size: 27px;' class='headding_text'>Our
+                                        AI-First framework aims to facilitate data monetization,
+                                        encompassing:</p><br />
+                                    <div class='col-sm-12'>
+                                        <div style='    padding: 0px 0px;' class='row card '>
+                                            <div class='card-body'>
+                                                <li><b style='color:#0075C5'>Streamlined
+                                                        Processes</b>:Incorporating the
+                                                    Sense-Think-Respond-Learn (STRL) system to
+                                                    convert data into actionable intelligence
+                                                    efficiently.</li>
+                                                <li><b style='color:#0075C5'>Cutting-Edge
+                                                        Technologies</b>:Utilizing innovative
+                                                    data engineering techniques for semantic
+                                                    architecture, knowledge graphs, and deep
+                                                    neural networks, transforming your business
+                                                    landscape. Implementing data consumption
+                                                    approaches to vitalize data science through
+                                                    integrated workflows for analytics,
+                                                    information visualization, and streamlined
+                                                    decision-making processes.</li>
+                                                <p>Tap into an exceptional internal and external
+                                                    ecosystem that encompasses technology
+                                                    centres of excellence, research-driven
+                                                    solutions, and subject matter experts. This
+                                                    powerful network fuels innovation and
+                                                    enables the delivery of scalable solutions
+                                                    to meet diverse needs.</p>
+                                            </div>
+                                        </div>
+                                        <div class='overlay'></div>
+                                    </div>
+                                </div>
+                                <div class='col-lg'>
+                                    <div>
+                                        <img class='Content_img img_border' src='img/sub_popup_6.1.1.gif' alt=''>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style=' overflow-x: hidden;   margin-top: 24px;' class='row row_hover6 '>
+                                <div class='col-lg'>
+                                    <div>
+                                        <img class='Content_img img_border' src='img/sub_popup_6.1.2.gif' alt=''>
+                                    </div>
+                                </div>
+                                <div class='col-lg center_left_line'>
+                                    <div class='col-sm-12'>
+                                        <div style='padding: 0px 0px;' class='row card '>
+                                            <div class='card-body'>
+                                                <p>The AI-first suite of services, solutions,
+                                                    and platforms leverages generative AI
+                                                    technologies to establish interconnected
+                                                    ecosystems, driving scalable efficiencies
+                                                    and fostering rapid growth.</p>
+                                                <p>The transformation propelled by generative AI
+                                                    significantly enhances human productivity
+                                                    across various roles, fundamentally
+                                                    reshaping the value chains in work dynamics.
+                                                    Simultaneously, it sparks the genesis of new
+                                                    AI-powered business models, products,
+                                                    services, and ecosystem paradigms that
+                                                    reimagine business and industry value
+                                                    chains.</p>
+                                            </div>
+                                            <div class='overlay'></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div style='overflow-x: hidden;    margin-top: 24px;' class='row row_edit '>
+                                    <div class='col-lg center_right_line'>
+                                        <div class='col-sm-12'>
+                                            <div style='padding: 0px 0px;' class='row card'>
+                                                <div class='col-12 card-body'>
+                                                    <p>As interest and momentum in AI intensify,
+                                                        catalyzed further by generative AI,
+                                                        businesses are swiftly transitioning
+                                                        from their digital core to a cognitive
+                                                        core. Many companies possess extensive
+                                                        data architectures developed over
+                                                        numerous years, housing untapped
+                                                        potential within a blend of cloud-based
+                                                        systems and legacy monoliths.
+                                                        Organizational knowledge is dispersed
+                                                        across documents, systems, and an aging
+                                                        workforce, necessitating intensive
+                                                        efforts to modernize this core. The
+                                                        journey to achieve value at scale
+                                                        involves navigating through a non-linear
+                                                        path by breaking opportunities into
+                                                        smaller, achievable wins.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='col-lg '>
+                                        <div>
+                                            <img class='Content_img img_border' src='img/sub_popup_6.1.3.gif' alt=''>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h2 style="    font-size: 30px;
+font-weight: 700;">We specialize in :</h2>
+                            <div class="row">
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/Machine Learning Algorithms.png" alt=""
+                                            srcset=""></span>
+                                    <p style="margin-top: 10px;">Machine Learning Algorithms </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/Natural Language Processing (NLP).png"
+                                            alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;">Natural Language Processing (NLP) </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/Computer Vision.png" alt=""
+                                            srcset=""></span>
+                                    <p style="margin-top: 10px;">Computer Vision </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/AI-powered Chatbots.png" alt=""
+                                            srcset=""></span>
+                                    <p style="margin-top: 10px;">AI-powered Chatbots </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/Predictive Analytics.png" alt=""
+                                            srcset=""></span>
+                                    <p style="margin-top: 10px;"> Predictive Analytics
+                                    </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/AI Integration.png" alt=""
+                                            srcset=""></span>
+                                    <p style="margin-top: 10px;"> AI Integration
+                                    </p>
+                                </div>
+                            </div>
+                            <h2 style="    font-size: 30px;
+font-weight: 700;">Technologies we work with:</h2>
+                            <div class="row">
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/python.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;">Python
+                                    </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/Ruby.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;">Ruby </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/Julia.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;">Julia </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/javascript(node).png" alt=""
+                                            srcset=""></span>
+                                    <p style="margin-top: 10px;">JavaScript (Node.js) </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/java.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;">Java </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/c++.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;">C++</p>
+                                </div>
+                            </div>
+                        </div><br>
+
+                        <button style="margin-top: 20px;" data-bs-dismiss="modal" aria-label="Close"
+                            class="view-less-btn">View Less</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+    <!-- modal service 7 -->
+
+
+
+    <div class="modal top fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+        data-mdb-backdrop="true" data-mdb-keyboard="true">
+        <div class="modal-dialog modal-fullscreen" style="max-width: 100%;margin: auto;">
+            <div class="modal-content">
+
+                <div class="modal-body "
+                    style="background-color: black; height: auto; width: 100%; padding: 3vw 4vw;   border: 2px solid #0073c2;">
+                    <button class="btn-close close-button-popup" data-bs-dismiss="modal" aria-label="Close"><i
+                            class="fa-solid fa-xmark"></i></button>
+
+                    <!-- contant start  -->
+                    <div class="modal-body popup_edit">
+                        <div class='ser-des' id="highlight-table7">
+
+                            <div style=' overflow-x: hidden;   margin-top: 24px;' class='row row_edit row_hover7 '>
+                                <div class='col-lg center_right_line'>
+                                    <div class='col-sm-12'>
+                                        <div style='    padding: 0px 0px;' class='row card '>
+                                            <div class='card-body'>
+                                                <p>Soven Developer has been a trailblazer in the
+                                                    implementation of cutting-edge cloud and
+                                                    virtualization technologies, empowering
+                                                    enterprises to drive robust business growth
+                                                    and deliver exceptional digital experiences.
+                                                    Envisioning the modern enterprise in the
+                                                    digital era revolves around an agile IT data
+                                                    center equipped with secure,
+                                                    service-oriented infrastructure. We
+                                                    specialize in enabling businesses to embrace
+                                                    advanced hybrid data center management
+                                                    architectures, fostering agility and
+                                                    unified, secure service delivery for users.
+                                                    Central to our data center management
+                                                    services is the automation of IT service
+                                                    processes and their orchestration.</p>
+                                            </div>
+                                        </div>
+                                        <div class='overlay'></div>
+                                    </div>
+                                </div>
+                                <div class='col-lg'>
+                                    <div>
+                                        <img class='Content_img img_border' src='img/sub_popup_8.3.jpg' alt=''>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style=' overflow-x: hidden;   margin-top: 24px;' class='row row_hover7 '>
+                                <div class='col-lg'>
+                                    <div>
+                                        <img class='Content_img img_border' src='img/sub_popup_8.1.png' alt=''>
+                                    </div>
+                                </div>
+                                <div class='col-lg center_left_line'>
+                                    <div class='col-sm-12'>
+                                        <div style='padding: 0px 0px;' class='row card '>
+                                            <div class='card-body'>
+                                                <p>Soven Developer has supported over a hundred
+                                                    enterprises in seamless migrations to global
+                                                    data centers, currently managing a network
+                                                    of over half a million servers worldwide.Our
+                                                    array of services within the data center
+                                                    management portfolio encompasses data center
+                                                    operations, transformation, automation, and
+                                                    cloud services. Additionally, our NGDC
+                                                    suite, tailored to meet customer needs,
+                                                    leverages disruptive technology, adaptable
+                                                    commercial models, and global delivery
+                                                    approaches to drive value for businesses,
+                                                    users, and IT. Implementing these data
+                                                    center services enables businesses to
+                                                    cultivate expertise in delivering data
+                                                    center, cloud transition, migration,
+                                                    consulting, and system integration services
+                                                    on a global scale, paving the way for a
+                                                    future-proof hybrid cloud infrastructure.
+                                                </p>
+                                            </div>
+                                            <div class='overlay'></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><br />
+
+                            <div style=' overflow-x: hidden;   margin-top: 24px;' class='row row_edit row_hover7 '>
+                                <div class='col-lg center_right_line'>
+                                    <div class='col-sm-12'>
+                                        <div style='    padding: 0px 0px;' class='row card '>
+                                            <div class='card-body'>
+                                                <p>These solutions enhance agility for
+                                                    end-users, facilitating the delivery of
+                                                    automated and responsive business
+                                                    services. Soven Developer’s data center
+                                                    infrastructure management offerings have
+                                                    significantly reduced total cost of
+                                                    ownership (TCO) for IT while elevating
+                                                    operational excellence through
+                                                    controlled, software-defined
+                                                    infrastructure and service-based process
+                                                    integration.</p>
+                                                <p>Soven Developer boasts an extensive and
+                                                    diverse range of data center management
+                                                    services, including MCOD, RecoverNXT
+                                                    CLOUD, BackupNXT, ROBOace, cloud
+                                                    assessment and readiness tool (CART),
+                                                    MyCloud, DRYiCETM, and SDI Innovation
+                                                    Garage.</p>
+                                            </div>
+                                        </div>
+                                        <div class='overlay'></div>
+                                    </div>
+                                </div>
+                                <div class='col-lg'>
+                                    <div>
+                                        <img class='Content_img img_border' src='img/sub_popup_8.2.jpg' alt=''>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h2 style="    font-size: 30px;
+                                font-weight: 700;">We specialize in :</h2>
+                            <div class="row">
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/AWS (Amazon Web Services).png" alt=""
+                                            srcset=""></span>
+                                    <p style="margin-top: 10px;"> AWS (Amazon Web Services) </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/Microsoft Azure.png" alt=""
+                                            srcset=""></span>
+                                    <p style="margin-top: 10px;">Microsoft Azure </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/Google Cloud Platform .png" alt=""
+                                            srcset=""></span>
+                                    <p style="margin-top: 10px;">Google Cloud Platform </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/Cloud Security.png" alt=""
+                                            srcset=""></span>
+                                    <p style="margin-top: 10px;">Cloud Security </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/Serverless Computing.png" alt=""
+                                            srcset=""></span>
+                                    <p style="margin-top: 10px;"> Serverless Computing </p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/Cloud Migration and Optimization.png"
+                                            alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;"> Cloud Migration and Optimization </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/DevOps and Automation.png" alt=""
+                                            srcset=""></span>
+                                    <p style="margin-top: 10px;">DevOps and Automation </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/Containerization and Kubernetes.png" alt=""
+                                            srcset=""></span>
+                                    <p style="margin-top: 10px;">Containerization and Kubernetes </p>
+                                </div>
+                            </div>
+
+                            <h2 style="    font-size: 30px;
+                                                font-weight: 700;">Technology we work with :</h2>
+                            <div class="row">
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/python.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;"> Python </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/javascript(node).png" alt=""
+                                            srcset=""></span>
+                                    <p style="margin-top: 10px;"> JavaScript (Node.js) </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/java.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;">Java</p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/Ruby.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;">Ruby </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/Scala.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;"> Scala</p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/Kotlin.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;"> Kotlin</p>
+                                </div>
+                            </div>
+                        </div><br>
+
+                        <button style="margin-top: 20px;" data-bs-dismiss="modal" aria-label="Close"
+                            class="view-less-btn">View Less</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+    <!-- modal service 8 -->
+
+
+
+    <div class="modal top fade" id="exampleModal8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+        data-mdb-backdrop="true" data-mdb-keyboard="true">
+        <div class="modal-dialog modal-fullscreen" style="max-width: 100%;margin: auto;">
+            <div class="modal-content">
+
+                <div class="modal-body "
+                    style="background-color: black; height: auto; width: 100%; padding: 3vw 4vw;   border: 2px solid #0073c2;">
+                    <button class="btn-close close-button-popup" data-bs-dismiss="modal" aria-label="Close"><i
+                            class="fa-solid fa-xmark"></i></button>
+
+                    <!-- contant start  -->
+
+                    <div class="modal-body popup_edit">
+
+                        <div class='ser-des' id="highlight-table8">
+                            <div style=' overflow-x: hidden;   margin-top: 24px;' class='row row_edit row_hover8 '>
+                                <div class='col-lg center_right_line'>
+                                    <div class='col-sm-12'>
+                                        <div style='    padding: 0px 0px;' class='row card '>
+                                            <div class='card-body'>
+                                                <p>In today's fast-paced world, where innovation
+                                                    continuously evolves and connectivity
+                                                    becomes intrinsic, the interactions between
+                                                    individuals, applications, enterprises face
+                                                    increasingly sophisticated and widespread
+                                                    cyber threats that are challenging to
+                                                    combat. Embedding cybersecurity within your
+                                                    technology framework and integrating it at
+                                                    every phase of your business lifecycle is
+                                                    crucial to fortify cyber defense, foster
+                                                    resilience, and instill a security-centric
+                                                    culture across the organization.</p>
+                                                <p>The current imperative involves integrating
+                                                    security seamlessly into the fabric of your
+                                                    enterprise and safeguarding the future.</p>
+                                            </div>
+                                        </div>
+                                        <div class='overlay'></div>
+                                    </div>
+                                </div>
+                                <div class='col-lg'>
+                                    <div>
+                                        <img class='Content_img img_border'
+                                            src='https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTqbRl2UBHDeNnP1h7uspLvfRqwAvfROgxOMa3lTXHetHR5pRBA'
+                                            alt=''>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style=' overflow-x: hidden;   margin-top: 24px;' class='row row_hover8 '>
+                                <div class='col-lg'>
+                                    <div>
+                                        <img class='Content_img img_border' src='img/sub_popup_7.1.png' alt=''>
+                                    </div>
+                                </div>
+                                <div class='col-lg center_left_line'>
+                                    <div class='col-sm-12'>
+                                        <div style='padding: 0px 0px;' class='row card '>
+                                            <div class='card-body'>
+                                                <li><b style='color:#0075C5'>Secure by
+                                                        Design:</b> We facilitate enterprises in
+                                                    adopting a 'Secure by Design' approach,
+                                                    instilling a mindset that prioritizes
+                                                    security across every stage of the business
+                                                    lifecycle. This ensures heightened
+                                                    visibility into security threats, their
+                                                    impacts, resolutions, and minimizes
+                                                    associated risks.</li>
+                                                <li><b style='color:#0075C5'> Secure by
+                                                        Scale:</b> Our commitment lies in
+                                                    establishing resilient cybersecurity
+                                                    programs that empower customers to operate
+                                                    at scale while enhancing operational
+                                                    efficiency and reducing costs. Our strategic
+                                                    investments in global security operation
+                                                    centers, AI & ML-based integrated
+                                                    cybersecurity platforms, and partnerships
+                                                    with leading cybersecurity research
+                                                    universities optimize costs and expand our
+                                                    reach, ensuring security is scalable.</li>
+                                                <li><b style='color:#0075C5'>Secure the
+                                                        Future:</b> Our aim is to assist
+                                                    enterprises in 'Securing the Future' by
+                                                    continuously embracing new technologies and
+                                                    adapting to evolving landscapes, thereby
+                                                    accelerating innovation and delivering
+                                                    enhanced value. Our clients benefit from
+                                                    advanced threat-hunting capabilities,
+                                                    comprehensive analytics, malware analysis,
+                                                    and cutting-edge technology innovations
+                                                    developed in the Infosys Security R&D Labs.
+                                                </li>
+                                            </div>\
+                                            <div class='overlay'></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div><br />
+
+                            <p>Guided by our 3S principles, we are committed to constructing
+                                a comprehensive security program through our service
+                                offerings, adopting a 4D approach:
+                                Diagnose-Design-Deliver-Defend.</p>
+                            <div style=' overflow-x: hidden;   margin-top: 24px;' class='row row_edit row_hover8 '>
+                                <div class='col-lg center_right_line'>
+                                    <p style='    font-size: 27px;' class='headding_text'>
+                                        Our AI-First framework aims to facilitate data
+                                        monetization, encompassing:</p><br />
+                                    <div class='col-sm-12'>
+                                        <div style='    padding: 0px 0px;' class='row card '>
+                                            <div class='card-body'>
+                                                <li><b style='color:#0075C5'> Diagnose:</b>
+                                                    We assess and analyze your enterprise's
+                                                    cybersecurity maturity comprehensively.
+                                                </li>
+                                                <br><i style='color:#0075C5'>Assess</i> |
+                                                <i>Analyze</i> | <i style='color:#0075C5'>Advise</i><br>
+                                                <br>
+                                                <li><b style='color:#0075C5'> Design:</b> We
+                                                    create a scalable and future-ready
+                                                    cybersecurity suite to implement a
+                                                    holistic security strategy.</li>
+                                                <br><i>Architect</i> | <i style='color:#0075C5'>Integrate</i> |
+                                                Standardize</i><br>
+                                                <br>
+                                                <li><b style='color:#0075C5'>Deliver: </b>We
+                                                    transform, automate, and orchestrate
+                                                    infrastructure, data, and applications
+                                                    from on-premise to cloud.
+                                                    <br><br><i style='color:#0075C5'>Implement</i>
+                                                    | <i>Mitigate</i> | <i style='color:#0075C5'>Transform</i>
+                                                    <br><br>
+                                                <li><b style='color:#0075C5'> Defend: </b>We
+                                                    assist in governing, operating,
+                                                    monitoring, detecting, and responding to
+                                                    cyber threats effectively.
+                                                    <br><br><i>Operate</i> |<i style='color:#0075C5'>
+                                                        Respond</i> |
+                                                    <i>Govern</i>
+                                            </div>
+                                        </div>
+                                        <div class='overlay'></div>
+                                    </div>
+                                </div>
+                                <div class='col-lg'>
+                                    <div>
+                                        <img class='Content_img img_border' src='img/sub_popup_7.2.gif' alt=''>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div>
+                            <h2 style="    font-size: 30px;
+font-weight: 700;">We specialize in :</h2>
+                            <div class="row">
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/Mobile Application Security.png" alt=""
+                                            srcset=""></span>
+                                    <p style="margin-top: 10px;"> Mobile Application Security</p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 120px;" src="img/SaaS security.png" alt=""
+                                            srcset=""></span>
+                                    <p style="margin-top: 10px;">SaaS security
+                                    </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/Penetration Testing.png" alt=""
+                                            srcset=""></span>
+                                    <p style="margin-top: 10px;">Penetration Testing </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/Network Security.png" alt=""
+                                            srcset=""></span>
+                                    <p style="margin-top: 10px;"> Network Security
+                                    </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/service_card_icon_2.2.png" alt=""
+                                            srcset=""></span>
+                                    <p style="margin-top: 10px;"> Endpoint Security </p>
+                                </div>
+                            </div>
+                            <h2 style="    font-size: 30px;
+font-weight: 700;">Technology we work with :</h2>
+                            <div class="row">
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/python.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;"> Python</p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/javascript(node).png" alt=""
+                                            srcset=""></span>
+                                    <p style="margin-top: 10px;">JavaScript (Node.js)
+                                    </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/c++.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;">C/C++ </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/java.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;"> Java
+                                    </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/Ruby.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;"> Ruby </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- contant end  -->
+                    </div>
+                    <button style="margin-top: 20px;" data-bs-dismiss="modal" aria-label="Close"
+                        class="view-less-btn">View Less</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+    <!-- modal service 9 -->
+
+
+
+
+    <div class="modal top fade" id="exampleModal9" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+        data-mdb-backdrop="true" data-mdb-keyboard="true">
+        <div class="modal-dialog modal-fullscreen" style="max-width: 100%;margin: auto;">
+            <div class="modal-content">
+
+                <div class="modal-body "
+                    style="background-color: black; height: auto; width: 100%; padding: 3vw 4vw;   border: 2px solid #0073c2;">
+                    <button class="btn-close close-button-popup" data-bs-dismiss="modal" aria-label="Close"><i
+                            class="fa-solid fa-xmark"></i></button>
+
+                    <!-- contant start  -->
+
+                    <div class="modal-body popup_edit">
+                        <div class='ser-des' id="highlight-table9">
+                            <div style=' overflow-x: hidden;   margin-top: 24px;' class='row row_edit row_hover9'>
+                                <div class='col-lg center_right_line'>
+                                    <div class='col-sm-12'>
+                                        <div style='    padding: 0px 0px;' class='row card '>
+                                            <div class='card-body'>
+                                                <p>Embark on a transformative data journey with
+                                                    Soven Developer, where we empower businesses
+                                                    to modernize data practices, glean
+                                                    simplified insights, and scale AI platforms.
+                                                </p>
+                                                <p>Our proficiency in data and analytics serves
+                                                    as a catalyst for enhancing business
+                                                    operations, facilitating superior customer
+                                                    experiences, and driving innovative
+                                                    outcomes.</p>
+                                            </div>
+                                        </div>
+                                        <div class='overlay'></div>
+                                    </div>
+                                </div>
+                                <div class='col-lg'>
+                                    <div>
+                                        <img class='Content_img img_border' src='img/sub_popup_9.1.jpg' alt=''>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style=' overflow-x: hidden;   margin-top: 24px;' class='row row_hover9'>
+                                <div class='col-lg'>
+                                    <div>
+                                        <img class='Content_img img_border' src='img/sub_popup_9.2.jpg' alt=''>
+                                    </div>
+                                </div>
+                                <div class='col-lg center_left_line'>
+                                    <div class='col-sm-12'>
+                                        <div style='padding: 0px 0px;' class='row card '>
+                                            <div class='card-body'>
+                                                <p><b>Pioneering Strategies for Outstanding
+                                                        Results</b></p>
+                                                <p>At Soven Developer, we deeply recognize the
+                                                    pivotal role data and analytics play in
+                                                    reshaping industries. Our inventive services
+                                                    equip organizations to revolutionize
+                                                    customer interactions, amplify productivity,
+                                                    foster growth, and uncover new revenue
+                                                    avenues.</p>
+                                                <p>Armed with extensive industry experience and
+                                                    specialized knowledge in the dynamic realms
+                                                    of data and analytics, we stand as the
+                                                    trusted ally for enterprises venturing into
+                                                    transformational journeys.</p>
+                                                <p>Together, we can unlock the boundless
+                                                    potential of data and analytics, propelling
+                                                    your business towards unprecedented success
+                                                    in the digital era.</p>
+                                            </div>
+                                            <div class='overlay'></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style=' overflow-x: hidden;   margin-top: 24px;' class='row row_edit row_hover9 '>
+                                <div class='col-lg center_right_line'>
+                                    <div class='col-sm-12'>
+                                        <div style='    padding: 0px 0px;' class='row card '>
+                                            <div class='card-body'>
+                                                <p><b>Advancing Revenue and Efficiency :</b>
+                                                </p><br />
+                                                <p>Realize revenue expansion through
+                                                    data-centric strategies and
+                                                    customer-focused experiences. Elevate
+                                                    customer interactions by infusing
+                                                    analytics-driven insights and
+                                                    personalized services.</p>
+                                                <p><b><b>Monetize Your Data :</b><br>\</b>
+                                                </p><br />
+                                                <p>Uncover the inherent value of your data
+                                                    through innovative analytics strategies
+                                                    designed for monetization.</p>
+                                            </div>
+                                        </div>
+                                        <div class='overlay'></div>
+                                    </div>
+                                </div>
+                                <div class='col-lg'>
+                                    <div>
+                                        <img class='Content_img img_border' src='img/sub_popup_9.3.gif' alt=''>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style=' overflow-x: hidden;   margin-top: 24px;' class='row row_hover9'>
+                                <div class='col-lg'>
+                                    <div>
+                                        <img class='Content_img img_border' src='img/sub_popup_9.4.gif' alt=''>
+                                    </div>
+                                </div>
+                                <div class='col-lg center_left_line'>
+                                    <div class='col-sm-12'>
+                                        <div style='padding: 0px 0px;' class='row card '>
+                                            <div class='card-body'>
+                                                <p><b>Enhanced Operational Efficiency :</b>
+                                                </p>
+                                                <p>Leverage data-driven automation and
+                                                    optimization to amplify operational
+                                                    efficiency and employee productivity.
+                                                </p>
+                                                <p><b>Smart Cost Optimization</b></p><br />
+                                                <p>Gain valuable insights from analytics to
+                                                    intelligently optimize costs and manage
+                                                    resources more efficiently.</p>
+                                                <br><b>Proactive Risk Management</b>
+                                                <br>Protect your business with
+                                                analytics-driven risk mitigation and
+                                                preemptive fraud detection measures.
+                                            </div>
+                                            <div class='overlay'></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br><br>At Soven Developer, we're dedicated to empowering
+                                businesses with transformative data and analytics solutions
+                                tailored to drive growth and innovation.
+
+                            </div>
+                        </div>
+
+                        <div>
+                            <h2 style="    font-size: 30px;
+font-weight: 700;">We specialize in :</h2>
+                            <div class="row">
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/Data Visualization.png" alt=""
+                                            srcset=""></span>
+                                    <p style="margin-top: 10px;"> Data Visualization</p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/Machine Learning.png" alt=""
+                                            srcset=""></span>
+                                    <p style="margin-top: 10px;">Machine Learning
+                                    </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/Big Data Analytics.png" alt=""
+                                            srcset=""></span>
+                                    <p style="margin-top: 10px;">Big Data Analytics </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/Statistical Analysis.png" alt=""
+                                            srcset=""></span>
+                                    <p style="margin-top: 10px;"> Statistical Analysis
+                                    </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/Predictive Modeling .png" alt=""
+                                            srcset=""></span>
+                                    <p style="margin-top: 10px;"> Predictive Modeling </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/Natural Language Processing (NLP).png"
+                                            alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;"> Natural Language Processing (NLP)</p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/Time Series Analysis.png" alt=""
+                                            srcset=""></span>
+                                    <p style="margin-top: 10px;">Time Series Analysis
+                                    </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/Data Mining.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;">Data Mining</p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/Quantitative Analysis.png" alt=""
+                                            srcset=""></span>
+                                    <p style="margin-top: 10px;"> Quantitative Analysis
+                                    </p>
+                                </div>
+                            </div>
+
+                            <h2 style="    font-size: 30px;
+                                font-weight: 700;">Technology we work with </h2>
+                            <div class="row">
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/python.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;"> Python</p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/Ruby.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;">Ruby
+                                    </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/SQL.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;">SQL </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/Scala.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;"> Scala
+                                    </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/java.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;"> Java </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/Julia.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;"> Julia </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/MATALAB.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;">MATLAB
+                                    </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/SAS.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;">SAS</p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/javascript.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;"> JavaScript
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <button style="margin-top: 20px;" data-bs-dismiss="modal" aria-label="Close"
+                        class="view-less-btn">View Less</button>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    </div>
+
+    <!-- modal service 10 -->
+
+    <div class="modal top fade" id="exampleModal10" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+        data-mdb-backdrop="true" data-mdb-keyboard="true">
+        <div class="modal-dialog modal-fullscreen" style="max-width: 100%;margin: auto;">
+            <div class="modal-content">
+
+                <div class="modal-body "
+                    style="background-color: black; height: auto; width: 100%; padding: 3vw 4vw;   border: 2px solid #0073c2;">
+                    <button class="btn-close close-button-popup" data-bs-dismiss="modal" aria-label="Close"><i
+                            class="fa-solid fa-xmark"></i></button>
+
+                    <!-- contant start  -->
+
+                    <div class="modal-body popup_edit">
+
+                        <div class='ser-des' id="highlight-table10">
+
+                            <div style=' overflow-x: hidden;   margin-top: 24px;' class='row row_edit row_hover10 '>
+                                <div class='col-lg center_right_line'>
+                                    <div class='col-sm-12'>
+                                        <div style='    padding: 0px 0px;' class='row card '>
+                                            <div class='card-body'>
+                                                <p>RPA software development is giving businesses
+                                                    a new competitive edge by
+                                                    elevating workforce productivity and
+                                                    overcoming operational vulnerabilities
+                                                    through the automation of the business
+                                                    process. RPA’s smart software robots
+                                                    (bots) streamline and automate repetitive,
+                                                    mundane, and time-consuming tasks
+                                                    that are prone to human error. Robots are
+                                                    capable of reading files, copying and
+                                                    pasting data, accessing folders, extracting,
+                                                    and processing structured content,
+                                                    making operational processes smarter.</p>
+                                            </div>
+                                        </div>
+                                        <div class='overlay'></div>
+                                    </div>
+                                </div>
+                                <div class='col-lg'>
+                                    <div>
+                                        <img class='Content_img img_border'
+                                            src='https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/6e069285593141.5d80c5701f629.gif'
+                                            alt=''>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style=' overflow-x: hidden;   margin-top: 24px;' class='row row_hover10 '>
+                                <div class='col-lg'>
+                                    <div>
+                                        <img class='Content_img img_border' src='img/sub_popup_10.2.gif' alt=''>
+                                    </div>
+                                </div>
+                                <div class='col-lg center_left_line'>
+                                    <div class='col-sm-12'>
+                                        <div style='padding: 0px 0px;' class='row card '>
+                                            <div class='card-body'>
+                                                <p>With our RPA Development Services, we can
+                                                    help you expand your automation
+                                                    horizon with intelligent Robotic Process
+                                                    Automation solutions. Our RPA Center of
+                                                    Excellence empowers you to transform the
+                                                    business ecosystem by integrating
+                                                    RPA with cognitive technologies, machine
+                                                    learning, and artificial intelligence that
+                                                    result in streamlined business performance
+                                                    and customer experience. As an
+                                                    experienced RPA development company</p>
+                                            </div>
+                                            <div class='overlay'></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style=' overflow-x: hidden;   margin-top: 24px;' class='row row_edit row_hover10'>
+                                <div class='col-lg center_right_line'>
+                                    <div class='col-sm-12'>
+                                        <div style='    padding: 0px 0px;' class='row card '>
+                                            <div class='card-body'>
+                                                <p>we have a team of certified RPA
+                                                    specialists and expertise on RPA Tools
+                                                    (Automation Anywhere, UiPath,
+                                                    BluePrism, Azure Logic Apps, Azure
+                                                    Automation Services)—instilling
+                                                    intelligent
+                                                    automation into your process leading to
+                                                    measurable business impact by
+                                                    enhancing productivity, reducing cost,
+                                                    improving operational
+                                                    efficiency—maximizing the value of
+                                                    automation for the digital age.</p>
+                                            </div>
+                                        </div>
+                                        <div class='overlay'></div>
+                                    </div>
+                                </div>
+                                <div class='col-lg'>
+                                    <div>
+                                        <img class='Content_img img_border' src='img/sub_popup_10.3.webp' alt=''>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+                        <div>
+                            <h2 style="    font-size: 30px;
+font-weight: 700;">We specialize in :</h2>
+                            <div class="row">
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/Process Discovery and Analysis.png" alt=""
+                                            srcset=""></span>
+                                    <p style="margin-top: 10px;"> Process Discovery and Analysis </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/Bot Development and Implementation.png"
+                                            alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;">Bot Development and Implementation
+                                    </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/Automation Scripting.png" alt=""
+                                            srcset=""></span>
+                                    <p style="margin-top: 10px;">Automation Scripting</p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/Integration with APIs and Systems.png"
+                                            alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;"> Integration with APIs and Systems
+                                    </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 100px;" src="img/Workflow Automation.png" alt=""
+                                            srcset=""></span>
+                                    <p style="margin-top: 10px;">Workflow Automation</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;"
+                                            src="img/Exception Handling and Error Management.png" alt=""
+                                            srcset=""></span>
+                                    <p style="margin-top: 10px;"> Exception Handling and Error Management</p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;"
+                                            src="img/Performance Monitoring and Optimization.png" alt=""
+                                            srcset=""></span>
+                                    <p style="margin-top: 10px;"> Performance Monitoring and Optimization
+                                    </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/Security and Compliance.png" alt=""
+                                            srcset=""></span>
+                                    <p style="margin-top: 10px;">Security and Compliance</p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;"
+                                            src="img/RPA Consulting and Strategy Development.png" alt=""
+                                            srcset=""></span>
+                                    <p style="margin-top: 10px;"> RPA Consulting and Strategy Development
+                                    </p>
+                                </div>
+                            </div>
+
+                            <h2 style="    font-size: 30px;
+                                font-weight: 700;">Technology we work : </h2>
+
+                            <p>Certainly! Here are some programming languages commonly associated with Robotic
+                                Process Automation (RPA):</p>
+                            <div class="row">
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/UIPath.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;"> UIPath</p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/Automation Anywhere.png" alt=""
+                                            srcset=""></span>
+                                    <p style="margin-top: 10px;">Automation Anywhere
+                                    </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/Blue Prism.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;">Blue Prism </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/python.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;"> Python
+                                    </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 100px;" src="img/javascript.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;"> JavaScript </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/VBScript.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;"> VBScript </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/c_icon.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;">C#
+                                    </p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 75px;" src="img/java.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;">Java</p>
+                                </div>
+                                <div class="col" style="text-align: center;    padding: 20px 20px;">
+                                    <span><img style="width: 100px;" src="img/SQL.png" alt="" srcset=""></span>
+                                    <p style="margin-top: 10px;"> SQL
+                                    </p>
+                                </div>
+                            </div>
+                        </div><br>
+                        <button style="margin-top: 20px;" data-bs-dismiss="modal" aria-label="Close"
+                            class="view-less-btn">View Less</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    </div>
+    <!-- modal end  -->
+
+
+
+    <div class="services-list ">
+        <center>
+
+            <section class="row justify-content-center m-0 service-card-list">
+                <!-- Service 1 -->
+                <!-- <div class="col-sm-12 col-md-6 col-lg-4 mb-2">
+                        <div class="bks p-3 service-card">
+                            <div class="service">
+                                <div class="Service_icons">
+                                    
+                                </div>
+                                <h2 class="service-title">Enterprise Application</h2>
+                                <p class="excerpt">At Soven Developer, our Application Services collaborate closely with
+                                    both business and IT leaders.
+                                    <br> <button class="read-more-btn" data-service="service1">Read More</button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-2">
+                        <div class="bks p-3 service-card">
+                            <div class="service">
+                                <div>
+                                    
+                                </div>
+                                <h2 class="service-title">Web Development</h2>
+                                <p class="excerpt">Welcome to our professional web design and development services
+                                    tailored to enhance your online presence and drive business growth. We offer
+                                    affordable rates to assist your business in attracting and retaining visitors while
+                                    converting them into loyal customers. <br>.<button class="read-more-btn"
+                                        data-service="service2">Read More</button></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-2">
+                        <div class="bks p-3 service-card">
+                            <div class="service">
+                                <h2 class="service-title">Mobile App Development</h2>
+                                <p class="excerpt">At Soven Developer, we specialize in crafting tailored mobile
+                                    applications that cater to your unique business requirements. <br><button
+                                        class="read-more-btn" data-service="service3">Read More</button></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-2">
+                        <div class="bks p-3 service-card">
+                            <div class="service">
+                                <h2 class="service-title">Digital Marketing</h2>
+                                <p class="excerpt">Soven Developer's prowess in Digital Marketing enables enterprises to
+                                    establish profound connections with customers through tailored
+                                    experiences.<br><button class="read-more-btn" data-service="service4">Read
+                                        More</button></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-2">
+                        <div class="bks p-3 service-card">
+                            <div class="service">
+                                <h2 class="service-title">Blockchain </h2>
+                                <p class="excerpt">The forthcoming landscape of business will be built upon the internet
+                                    of value. Global markets are witnessing the emergence of a new stakeholder, termed
+                                    the "prosumer," blurring the traditional lines between producers and consumers
+                                    across various industries.<br><button class="read-more-btn"
+                                        data-service="service5">Read More</button></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-2">
+                        <div class="bks p-3 service-card">
+                            <div class="service">
+                                <h2 class="service-title">Artificial Intelligence</h2>
+                                <p class="excerpt">The transformative influence of generative AI, alongside a cloud
+                                    foundation, is fundamentally altering the business landscape. <br><button
+                                        class="read-more-btn" data-service="service6">Read More</button></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-2">
+                        <div class="bks p-3 service-card">
+                            <div class="service">
+                                <h2 class="service-title">Cyber Security</h2>
+                                <p class="excerpt">In today's fast-paced world, where innovation continuously evolves
+                                    and connectivity becomes intrinsic, the interactions between individuals,
+                                    applications, and data have grown complex and distributed. <br><button
+                                        class="read-more-btn" data-service="service7">Read More</button></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-2">
+                        <div class="bks p-3 service-card">
+                            <div class="service">
+                                <h2 class="service-title">Cloud</h2>
+                                <p class="excerpt">Soven Developer has been a trailblazer in the implementation of
+                                    cutting-edge cloud and virtualization technologies, empowering enterprises to drive
+                                    robust business growth and deliver exceptional digital experiences.<br><button
+                                        class="read-more-btn" data-service="service8">Read More</button></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-2">
+                        <div class="bks p-3 service-card">
+                            <div class="service">
+                                <h2 class="service-title">Data Analytics</h2>
+                                <p class="excerpt">Embark on a transformative data journey with Soven Developer, where
+                                    we empower businesses to modernize data practices, glean simplified insights, and
+                                    scale AI platforms.
+                                    <br><button class="read-more-btn" data-service="service9">Read More</button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-2">
+                        <div class="bks p-3 service-card">
+                            <div class="service">
+                                <h2 class="service-title">RPA</h2>
+                                <p class="excerpt">RPA software development is giving businesses a new competitive edge
+                                    by
+                                    elevating workforce productivity and overcoming operational vulnerabilities through
+                                    the
+                                    automation of the business process.<br>
+                                    <button class="read-more-btn" data-service="service10">Read More</button>
+                                </p>
+                            </div>
+                        </div>
+                    </div> -->
+            </section>
+        </center>
+    </div>
+    <!-- Popup for detailed service information -->
+    <div class="popup " id="service-popup">
+        <div class="popup-content ">
+            <span class="close-btn">&times;</span>
+            <h2 class="service-title"></h2>
+            <div class="service-details">
+
+                <!-- Detailed service information will be populated here -->
+            </div>
+
+            <button class="view-less-btn">View Less</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row mt-4 justify-content-md-between">
+                <div class="col-sm-12 col-md-6 mb-4">
+                    <div>
+                        <img src="img/logo.png" class="img-fluid" width="57" alt="">
+                    </div>
+                    <h5 class="mt-2 text-white">
+                        Soven Developer </h5>
+                    <p style="font-size: 13px;text-align: justify;" class="text-white-50">
+                        Sovendeveloper is a
+                        versatile company specializing in website
+                        development, app development, and software design. With
+                        their expertise in
+                        creating
+                        innovative and user-centric solutions, they deliver
+                        high-quality products
+                        tailored to meet
+                        client's specific needs.</p>
+                </div>
+                <div class="col-sm-12 col-md-4 mb-4">
+                    <!-- Social media icons -->
+                    <div class="d-flex justify-content-center">
+                        <a href="https://m.facebook.com/sovendeveloper" class="mx-1">
+                            <svg class="anchor-link" xmlns="http://www.w3.org/2000/svg" width="35" height="35"
+                                fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com/DeveloperSoven" class=" mx-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                                class="bi bi-twitter" viewBox="0 0 16 16">
+                                <path
+                                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15" />
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/sovendeveloper?igsh=Z2hzc3dmOTFzYjUy" class=" mx-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                                class="bi bi-instagram" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/soven-developer/" class=" mx-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                                class="bi bi-linkedin" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401m-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="https://youtube.com/@sovendeveloper3909?si=Rd0I_B_fa8UnwS8s" class=" mx-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="35" height="35"
+                                viewBox="0 0 32 24" id="youtube">
+                                <path
+                                    d="M25 0H7C3.14 0 0 3.14 0 7v10c0 3.86 3.14 7 7 7h18c3.86 0 7-3.14 7-7V7c0-3.86-3.14-7-7-7zm5 17c0 2.757-2.243 5-5 5H7c-2.757 0-5-2.243-5-5V7c0-2.757 2.243-5 5-5h18c2.757 0 5 2.243 5 5v10z">
+                                </path>
+                                <path
+                                    d="m21.406 11.086-9-4A1 1 0 0 0 11 8v8a.999.999 0 0 0 1.406.914l9-4a1.001 1.001 0 0 0 0-1.828zM13 14.461V9.539L18.538 12 13 14.461z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center align-items-center contact-us-info">
+                        <a href="" class="contact">suraj@sovendeveloper</a>
+                        <a href="" class="contact">paulbrown@sovendeveloper</a>
+                        <a href="tel:+44 (0)744 8006087" class="contact">+44
+                            (0)744 8006087</a>
+                        <a href="" class="contact"> 6, St Paul’s Road,
+                            Twickenham,</a>
+                        <a href="" class="contact"> London, TW18 3HH</a>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center py-4 text-white" style="font-size: 16px; border-top: #0075C5 2px solid;">
+                sovendeveloper © 2023-24
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

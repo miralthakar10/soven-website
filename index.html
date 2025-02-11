@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="icon" type="images/x-icon" href="img/logo.png" />
+    <link href="https://db.onlinewebfonts.com/c/8f2a9d487bbbc60974cd132fc3a63862?family=Aeonik+Regular"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/678e3af47d.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.slim.min.js"></script>
+    <script src="js/bootstrap.bundle2.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stars.css">
+    <title>Soven Developers-Software Development</title>
+    <style>
+        /* scroll bar edit  */
+        body {
+            width: 100%;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: black;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #0075C5;
+            border-radius: 10px;
+        }
+
+        .ani {
+            transition: all 1.5s;
+        }
+
+        .ani::before {
+            content: "Leader";
+            animation: animate infinite 10s;
+            padding-left: 10px;
+            background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .deve {
+            font-size: 40px;
+        }
+
+        @keyframes animate {
+
+            33% {
+                content: "Innovator";
+            }
+
+            66% {
+                content: "Disruptor";
+            }
+
+            100% {
+                content: "Leader  ";
+            }
+
+        }
+
+        .loader {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: "Aeonik Regular" !important;
+
+            margin: 0;
+            background: linear-gradient(black 30%, rgba(7, 7, 59, 0.459), #0076c555, rgba(255, 255, 255, 0.516)), black;
+        }
+
+        .loader1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .line1 {
+            width: 600px;
+            height: 4px;
+            margin-top: 50px;
+            background-color: white;
+            animation: lineAnimation 6s linear infinite;
+        }
+
+        .text1 {
+            /* font-family: Arial, sans-serif; */
+            font-size: 32px;
+            color: #0075C5;
+            text-align: center;
+            margin-top: 10px;
+            animation: textAnimation 3s ease-in-out infinite;
+        }
+
+        @keyframes lineAnimation {
+            0% {
+                transform: scaleX(0);
+            }
+
+            50%,
+            100% {
+                transform: scaleX(1);
+            }
+
+            75% {
+                transform: scaleX(0);
+            }
+        }
+
+        @keyframes textAnimation {
+            0% {
+                opacity: 0;
+            }
+
+            50%,
+            100% {
+                opacity: 0.5;
+            }
+
+            75% {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .text1 {
+                width: 300px !important;
+                font-size: 20px;
+            }
+        }
+
+        @media only screen and (max-width: 992px) {
+            .text-white-50 {
+                font-size: 13px !important;
+            }
+        }
+
+        .intro {
+            font-size: 16px;
+            text-align: justify;
+            margin-bottom: 1.25rem;
+            font-weight: 400;
+            color: #ffffffa6;
+            display: none;
+        }
+
+        /* Show the element when screen width is 450px or more */
+        @media (min-width: 450px) {
+            .intro {
+                display: block;
+            }
+
+        }
+
+        @media (max-width: 450px) {
+
+            .ani::before {
+                font-size: 15vw;
+            }
+
+            .long-text {
+                font-size: 21px !important;
+            }
+
+            .deve {
+                font-size: 30px;
+            }
+        }
+
+        @media (max-width: 350px) {
+            .ani::before {
+                font-size: 30px;
+            }
+
+            .deve {
+                font-size: 25px;
+            }
+        }
+
+        @media screen and (max-width: 449px) and (min-width: 200px) {
+            .bg_fite {
+                padding: 0px 0px 0px 13px;
+            }
+        }
+
+        .center_box {
+            max-width: 515px;
+            border: 1px solid white;
+            padding: 24px 25px;
+            margin-top: -15px;
+            border-radius: 20px;
+        }
+
+        .center_box_row {
+            display: flex;
+            justify-content: start;
+        }
+
+        .box.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .box {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .side_arrow {
+            width: 25px;
+            height: 26px;
+            border: 1px solid white;
+            position: absolute;
+            background-color: black;
+            margin-left: 502px;
+            transform: rotate(45deg);
+            border-bottom: unset;
+            border-left: unset;
+            z-index: 100;
+        }
+
+        .side_arrow_right {
+            width: 25px;
+            height: 26px;
+            border: 1px solid white;
+            position: absolute;
+            background-color: black;
+            transform: rotate(223deg);
+            border-bottom: unset;
+            border-left: unset;
+            margin-right: 502px;
+            z-index: 100;
+        }
+
+        .center-line {
+            max-width: 63%;
+            border: solid 2px #006cb6;
+            /* transform: rotate(90deg); */
+            position: absolute;
+            border-radius: 22px;
+        }
+
+        .quits {
+            position: absolute;
+            margin-top: -294px;
+            max-width: 8px;
+            font-size: 56px;
+            margin-left: -6px;
+            color: white;
+        }
+
+        .quits_2 {
+            position: absolute;
+            color: white;
+            margin-top: -66px;
+            max-width: 8px;
+            font-size: 56px;
+            margin-left: 454px;
+        }
+
+        .line-container {
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 10px;
+            height: 63%;
+            background-color: transparent;
+            margin-top: -26%;
+
+        }
+
+        .line {
+            max-width: 63%;
+            border: solid 2px #006cb6;
+            /* transform: rotate(90deg); */
+            position: absolute;
+            border-radius: 22px;
+            transition: height 0.1s ease;
+        }
+
+        .line_bottom {
+            width: 14%;
+            height: 3px;
+            background: linear-gradient(45deg, white, #0075c5);
+        }
+
+        @media only screen and (max-width: 1200px) {
+            .line {
+                display: none;
+            }
+
+            .center_box {
+                margin-top: 0px;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            .side_arrow {
+                display: none;
+            }
+
+            .side_arrow_right {
+                display: none;
+            }
+
+            .quits {
+                display: none;
+            }
+
+            .quits_2 {
+                display: none;
+            }
+        }
+    </style>
+    <script>
+        // Wait for the page to load
+
+
+        // Show the loader initially
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelector('.content').style.display = 'none'; // Hide content initially
+
+            // Set a timeout to hide the loader after 5 seconds
+            setTimeout(function () {
+                document.querySelector('.loader').style.display = 'none'; // Hide the loader
+                document.querySelector('.content').style.display = 'block'; // Show the content
+            }, 3300); // 5000 milliseconds = 5 seconds
+        });
+
+        function handleClassRemoval() {
+            var whyusElement = document.querySelector(".intro");
+            if (window.innerWidth > 450) {
+                // Show the 'whyus' element when screen width is greater than 450px
+                whyusElement.style.display = 'block';
+            } else {
+                // Hide the 'whyus' element when screen width is 450px or less
+                whyusElement.style.display = 'none';
+            }
+        }
+
+
+        // On window resize, check the width and handle class removal
+        window.addEventListener('resize', function () {
+            handleClassRemoval();
+        });
+
+        // Call handleClassRemoval on initial load
+        handleClassRemoval();
+
+
+    </script>
+</head>
+
+<body>
+    <section class="loader">
+        <div class="loader1">
+            <div class="text1">Customer satisfaction is at the core of our DNA.<br><i> Your success drives us
+                    forward.</i></div>
+            <br><br>
+            <div class="line1"></div>
+        </div>
+    </section>
+
+    <!-- Your existing page content -->
+
+    <section class="content">
+
+
+        <div class="container-fluid mt-2">
+
+            <nav class="navbar navbar-expand-lg navbar-dark" style="padding: 2.5vw 0vw;">
+
+                <a class='navbar-brand' href='index.html'>
+                    <!-- <img src="img/SD logo animation - GIF.gif" class="d-inline-block align-center navbar_brand_image"
+                        alt=""> -->
+                    <a class="navbar-brand" href="#" style="margin-left: -47px;">
+                        <img src="img/logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top"
+                            style="font-size: 20px;">
+                        SOVEN DEVELOPER
+                    </a>
+                    <!-- <div class="d-flex align-center text-center navbar_brand_image ">
+                            <img style="height: 30px;" src="img/logo.png" alt="" srcset="">&nbsp;
+                             <h2 style="color: white; font-size: 19px;">SOVEN DEVLOPER</h2>
+                        </div> -->
+                    <!-- Soven Developer -->
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span style="color: white;"><i class="fa-solid fa-bars"></i></span>
+                </button>
+                <div class="collapse navbar-collapse " style="text-align: center;" id="navbarNav">
+                    <ul id="menu" class="navbar-nav ml-auto text-start nav_edit_home">
+                        <li class="nav-item nav_responsive">
+                            <a class="" href='index.html' id="th">Home</a>
+                        </li>
+                        <li class="nav-item nav_responsive">
+                            <a class="" href='aboutus.html'>About Us</a>
+                        </li>
+                        <li class="nav-item nav_responsive">
+                            <a class="" href='services.html'>Fields We Work In</a>
+                        </li>
+                        <li class="nav-item nav_responsive">
+                            <a class="" href='Ourexpertise.html'>Our Expertise</a>
+                        </li>
+                        <li class="nav-item nav_responsive">
+                            <a class="" href='outsourcing.html'> Service Programs</a>
+                        </li>
+                        <!-- <li class="nav-item nav_responsive">
+                            <a class="" href='technicalservices.html'> Technical Partner Service</a>
+                        </li> -->
+						 <li class="nav-item nav_responsive">
+                            <a class="" href='Startupstudio.html'>Startup Studio</a>
+                        </li>
+                        <li class="nav-item nav_responsive">
+                            <a class="" href='aidevelopment.html'> AI Development & Data Service</a>
+                        </li>
+                        <li class="nav-item contact_btn_edit nav_responsive">
+                            <a href='contact.html'>Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <p class="bottom_nav_line"></p>
+        </div>
+
+
+
+        <section id="particles-js" style="position: relative;">
+            <div style="text-align: -webkit-auto;">
+
+                <img src='img/backgroung_img.png' class="bg_fite" alt="">
+            </div>
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col p-md-5 p-4">
+
+                        <div class="p-md-5 p-4 mt-2 pane">
+                            <div class="text">
+                                <div>
+                                    <h1 class="mt-md-5 text-center mr-4 deve heading_res"
+                                        style="font-family: Arial, Helvetica, sans-serif; color: white;font-weight: 800;">
+                                        Be the <span class="auto-type Color_font"></span>
+                                        <script>
+                                            var typed = new Typed('.auto-type', {
+                                                strings: ["Innovator", 'Disruptor', 'Leader'],
+                                                typeSpeed: 200,
+                                                backSpeed: 200,
+                                                loop: true
+                                            })
+                                        </script>
+                                        <style>
+                                            .Color_font {
+                                                background: linear-gradient(to left,
+
+                                                        #2fb4bf,
+                                                        #2fb4bf,
+                                                        #2fb4bf);
+                                                -webkit-background-clip: text;
+                                                color: transparent;
+                                            }
+                                        </style>
+                                        <!-- <b class="ani long-text"></b> -->
+                                    </h1>
+                                    <h2 class="text-center p-2 heading_res"
+                                        style="color: white;   -webkit-text-stroke-width: 0.7px; ">with Soven Developer
+                                    </h2><br>
+                                    <p style="color: white;" class="text-center mt-2 intro">
+                                        At Soven Developer, our dedicated team strives to transform your ideas into
+                                        thriving, fully-fledged businesses. With our commitment to excellence, our
+                                        creative designers breathe life into your platform's design, while our skilled
+                                        developers ensure its intuitive, precise, and secure functionality. Together, we
+                                        endeavor to position you as a frontrunner in your sector.
+
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="header_button ">
+                        <a href="services.html" style="
+                                box-shadow: 0px 0px 30.5px 0px rgba(0, 117, 197, 1);margin-top: 50px;
+                                " class="btn mt-3 text-white know_morw_btn">Know More</a>
+                    </div> -->
+                </div>
+            </div>
+            <!-- <canvas class="particles-js-canvas-el" width="1206" height="811"
+                style="width: 100%; height: 100%;"></canvas> -->
+        </section>
+
+        <div class="container mt-5 mb-5">
+            <style>
+                .texts {
+                    margin-bottom: 20px;
+                }
+
+                div.disabled {
+                    cursor: not-allowed;
+                    opacity: 0.6;
+                }
+
+                div.highlight {
+                    color: white;
+                    /* border-bottom: 1px solid white; */
+                    /* padding: 20px 0px; */
+                }
+
+                .images img {
+                    max-width: 100%;
+                    height: auto;
+                    display: none;
+                    transition: all 0.5s ease-in-out;
+                }
+
+                .images img.active {
+                    display: block;
+                }
+            </style>
+
+            <style>
+                /* styles.css */
+                .row_hover11 {
+                    opacity: 0.3;
+                }
+
+                .highlighted {
+                    /* background-color: yellow; */
+                    opacity: 1;
+                }
+            </style>
+            <script>
+                // script.js
+                document.addEventListener('DOMContentLoaded', () => {
+                    const rows = document.querySelectorAll('#highlight-table6 .row_hover11');
+                    let currentIndex = 0;
+                    let intervalId;
+                    let isMouseOver = false;
+
+                    // Function to highlight rows one by one
+                    const highlightRowsSequentially = () => {
+                        if (!isMouseOver) {
+                            rows.forEach((row, index) => {
+                                if (index === currentIndex) {
+                                    row.classList.add('highlighted');
+                                } else {
+                                    row.classList.remove('highlighted');
+                                }
+                            });
+                            currentIndex = (currentIndex + 1) % rows.length;
+                        }
+                    };
+
+                    // Start the sequential highlighting with an interval
+                    const startHighlighting = () => {
+                        intervalId = setInterval(highlightRowsSequentially, 1000); // Change the interval as needed
+                    };
+
+                    // Stop the sequential highlighting
+                    const stopHighlighting = () => {
+                        clearInterval(intervalId);
+                    };
+
+                    // Add event listeners for mouseover effect
+                    rows.forEach(row => {
+                        row.addEventListener('mouseover', () => {
+                            isMouseOver = true;
+                            row.classList.add('highlighted');
+                            stopHighlighting();
+                        });
+                        row.addEventListener('mouseout', () => {
+                            isMouseOver = false;
+                            row.classList.remove('highlighted');
+                            startHighlighting();
+                        });
+                    });
+
+                    // Handle visibility change to stop and start highlighting based on tab visibility
+                    document.addEventListener('visibilitychange', () => {
+                        if (document.hidden) {
+                            stopHighlighting();
+                        } else {
+                            startHighlighting();
+                        }
+                    });
+
+                    // Initial start of the highlighting
+                    startHighlighting();
+                });
+
+            </script>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const boxes = document.querySelectorAll('.box');
+
+                    const scrollHandler = () => {
+                        boxes.forEach(box => {
+                            const boxTop = box.getBoundingClientRect().top;
+                            const triggerPoint = window.innerHeight - 50; // Adjust the trigger point if necessary
+
+                            if (boxTop < triggerPoint) {
+                                box.classList.add('show');
+                            }
+                        });
+                    };
+
+                    window.addEventListener('scroll', scrollHandler);
+
+                    // Run the scroll handler once to catch elements already in view
+                    scrollHandler();
+                });
+                window.addEventListener('scroll', function () {
+                    const line = document.getElementById('scrollingLine');
+                    const maxHeight = document.documentElement.scrollHeight - window.innerHeight;
+                    const scrollPosition = window.scrollY;
+                    const heightPercentage = (scrollPosition / maxHeight) * 2200;
+                    line.style.height = heightPercentage + 'px';
+                });
+
+            </script>
+            <div class="row texts" style="margin-top: 200px;">
+                <!-- <hr style="    background-color: #2196F3;
+                transform: rotate(90deg);
+                position: absolute;"> -->
+                <div class="line-container">
+                    <p class="center-line line" id="scrollingLine"></p>
+                </div>
+                <div class="row center_box_row auto-click" id="text1">
+                    <p class="quits" style="opacity: 1;"><i class="fa-solid fa-quote-left"></i></p>
+                    <p class="side_arrow"></p>
+                    <div class="center_box">
+                        <h2 class="header_text"> Coding</h2>
+                        <p class="line_bottom"></p>
+                        <p style="text-align: start; font-family: sans-serif; font-size: 17px;">Our journey begins with
+                            the coding phase. Our expert developers
+                            transform your ideas into functional code, using the latest technologies to ensure
+                            efficiency, scalability, and maintainability. We follow agile methodologies, allowing us to
+                            adapt quickly to changes and feedback. Rigorous testing is conducted throughout to identify
+                            and resolve issues early, ensuring a robust and reliable application.</p>
+                    </div>
+                </div>
+
+                <div class="row auto-click" id="text2" style="display: flex; justify-content: end;">
+                    <p class="side_arrow_right"></p>
+                    <div class="center_box ">
+                        <p class="quits_2" style="opacity: 1;"><i class="fa-solid fa-quote-left"></i></p>
+
+                        <h2 class="header_text headding_text"> Deployment</h2>
+                        <p class="line_bottom"></p>
+
+                        <p style="text-align: start; font-family: sans-serif; font-size: 17px;">Our journey begins with
+                            the coding phase. Our expert developers
+                            transform your ideas into functional code, using the latest technologies to ensure
+                            efficiency, scalability, and maintainability. We follow agile methodologies, allowing us to
+                            adapt quickly to changes and feedback. Rigorous testing is conducted throughout to identify
+                            and resolve issues early, ensuring a robust and reliable application.</p>
+                    </div>
+                </div>
+                <div class="row center_box_row auto-click" id="text3">
+                    <p class="side_arrow"></p>
+                    <p class="quits" style="opacity: 1;"><i class="fa-solid fa-quote-left"></i></p>
+
+                    <div class="center_box  ">
+                        <h2 class="header_text"> Hosting</h2>
+                        <p class="line_bottom"></p>
+
+                        <p style="text-align: start; font-family: sans-serif; font-size: 17px;">Our journey begins with
+                            the coding phase. Our expert developers
+                            transform your ideas into functional code, using the latest technologies to ensure
+                            efficiency, scalability, and maintainability. We follow agile methodologies, allowing us to
+                            adapt quickly to changes and feedback. Rigorous testing is conducted throughout to identify
+                            and resolve issues early, ensuring a robust and reliable application.</p>
+                    </div>
+                </div>
+                <!-- 
+                <div class="col-12 col-md-6 texts">
+                    <div id="text1" class="auto-click " style="    padding: 1px 0px;">
+                        <h2 class="header_text"> Coding</h2>
+                        <p style="text-align: start; font-family: sans-serif; font-size: 17px;">Our journey begins with
+                            the coding phase. Our expert developers
+                            transform your ideas into functional code, using the latest technologies to ensure
+                            efficiency, scalability, and maintainability. We follow agile methodologies, allowing us to
+                            adapt quickly to changes and feedback. Rigorous testing is conducted throughout to identify
+                            and resolve issues early, ensuring a robust and reliable application.</p>
+                    </div>
+                    <div id="text2" class="auto-click" style="padding: 1px 0px;">
+                        <h2> Deployment
+                        </h2>
+                        <p style="text-align: start;font-family: sans-serif; font-size: 17px;">Our journey begins with
+                            the coding phase. Our expert developers
+                            transform your ideas into functional code, using the latest technologies to ensure
+                            efficiency, scalability, and maintainability. We follow agile methodologies, allowing us to
+                            adapt quickly to changes and feedback. Rigorous testing is conducted throughout to identify
+                            and resolve issues early, ensuring a robust and reliable application.</p>
+                    </div>
+                    <div id="text3" class="auto-click" style="    padding: 1px 0px;">
+                        <h2>Hosting
+                        </h2>
+                        <p style="text-align: start; font-family: sans-serif; font-size: 17px;">Our journey begins with
+                            the coding phase. Our expert developers
+                            transform your ideas into functional code, using the latest technologies to ensure
+                            efficiency, scalability, and maintainability. We follow agile methodologies, allowing us to
+                            adapt quickly to changes and feedback. Rigorous testing is conducted throughout to identify
+                            and resolve issues early, ensuring a robust and reliable application.</p>
+                    </div>
+                </div> -->
+                <style>
+                    .home_img_1 {
+                        background: transparent;
+                        width: 327px;
+                        margin-top: 450px;
+                        margin-left: 57px;
+                    }
+
+                    .home_img_2 {
+                        background: transparent;
+                        margin-top: 36px;
+                        margin-left: 44px;
+                        transform: rotate(-12deg);
+                    }
+
+                    .home_img_3 {
+                        background: transparent;
+                        width: 502px;
+                        margin-top: -374px;
+                    }
+                </style>
+                <div class="col-12 col-md-6 images">
+                    <img id="image1" style="display: none;" class="home_img_1" src="img/home_ai_1-bg.png" alt="Image 1">
+                    <img id="image2" style="display: none;" class="home_img_2" src="img/home_ai_2.png" alt="Image 2">
+                    <img id="image3" style="display: none;" class="home_img_3" src="img/home_ai_3.png" alt="Image 3">
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function () {
+                            const texts = document.querySelectorAll('.auto-click');
+                            const images = document.querySelectorAll('.images img');
+                            let currentIndex = 0;
+                            let intervalId;
+
+                            const changeImage = (index) => {
+                                images.forEach(img => img.classList.remove('active'));
+                                images[index].classList.add('active');
+                            };
+
+                            const highlightText = (index) => {
+                                texts.forEach(text => text.classList.remove('highlight'));
+                                texts[index].classList.add('highlight');
+                            };
+
+                            const startImageRotation = () => {
+                                intervalId = setInterval(() => {
+                                    currentIndex = (currentIndex + 1) % images.length;
+                                    changeImage(currentIndex);
+                                    highlightText(currentIndex);
+                                }, 6000);
+                            };
+
+                            const stopImageRotation = () => {
+                                clearInterval(intervalId);
+                            };
+
+                            texts.forEach((text, index) => {
+                                text.addEventListener('mouseover', () => {
+                                    stopImageRotation();
+                                    highlightText(index);
+                                    text.click();
+                                });
+
+                                text.addEventListener('mouseout', () => {
+                                    startImageRotation();
+                                });
+
+                                text.addEventListener('click', () => {
+                                    currentIndex = index;
+                                    changeImage(currentIndex);
+                                });
+                            });
+
+                            // Show the first image by default, highlight the first text, and start automatic rotation
+                            images[0].classList.add('active');
+                            highlightText(0);
+                            startImageRotation();
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- <section class="section-content"><br></section> -->
+        <!-- <div class="header_button" style="margin-top: 100px;">
+            <button class="custom_button" style="border: #0075C5 solid 1px; width:200px">Why Us?</button>
+        </div> -->
+        <!-- <div class="container background_fade" id="section2">
+            <div class="row justify-content-center section-content ">
+                <div class="col-12 -5 mb-5 whyus">
+                    <h1 class="text-white text-center m-auto " style="font-size:3.5vw;">
+                        Why <span style="color: #0075C5;
+                -webkit-text-stroke-width: 0.7px; ">Choose</span>Us?
+                    </h1>
+                </div>
+                <style>
+                    .card-container {
+                        position: relative;
+                    }
+
+                    .card {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        transform-style: preserve-3d;
+                        transition: transform 0.5s ease;
+                    }
+
+                    .card-face {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        backface-visibility: hidden;
+                    }
+
+                    .card-back {
+                        transform: rotateY(180deg);
+                    }
+
+                    .flipped {
+                        transform: rotateY(180deg);
+                    }
+
+                    .identity-img {
+
+                        height: 41vh;
+                        margin: 1px 0px;
+                    }
+
+                    .mission-img {
+                        height: 41vh;
+                        margin: 1px;
+                    }
+                </style>
+
+                <div class="col-12 col-sm-6 col-md-4 mb-4 ">
+
+
+                    <div class="card_body">
+                        <div class="card_img">
+                            <img src="img/home_card_1.jfif" alt="" srcset="">
+                        </div>
+                        <div>
+                            <div class="bks  text_body p-3">
+                                <h1 class="" style="font-size: 22px;">Our Values</h1>
+                                <p style="font-size: 16px; margin: 3px;text-align: justify; color: white;">
+                                    Customer satisfaction is our unwavering promise and top priority. We deeply value
+                                    our
+                                    clients and go the extra mile to ensure their contentment.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-12 col-sm-6 col-md-4 mb-4">
+        
+                        <div class="card_body">
+                        <div class="card_img">
+                            <img src="img/home_card_2.avif" alt="" srcset="">
+                        </div>
+                        <div>
+                            <div class="bks  text_body p-3">
+                                <h1 class="" style="font-size: 22px;">Our Identity</h1>
+                                <p class="text-white-100" style="font-size: 16px; margin: 3px;text-align: justify;">We
+                                    are
+                                    crafting a people-centric company filled with talented, passionate individuals who
+                                    revel in
+                                    their work every single day.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="card_body">
+                        <div class="card_img">
+                            <img src="img/home_card_3.avif" alt="" srcset="">
+                        </div>
+                        <div>
+                            <div class="bks  text_body p-3">
+                                <h1 class="" style="font-size: 22px;">Our Mission</h1>
+                                <p class="text-white-150" style="font-size: 16px; margin: 3px;text-align: justify;">
+                                    Months of
+                                    meticulous planning, development, optimization, and rigorous testing go into each
+                                    solution
+                                    we craft. At Soven Developer, we perpetually strive for greatness, never settling
+                                    for
+                                    merely
+                                    good when excellence is attainable.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function () {
+                            const cards = document.querySelectorAll('.card');
+                            function flipCard(card) {
+                                card.classList.toggle('flipped');
+                            }
+                            cards.forEach((card, index) => {
+                                setTimeout(() => {
+                                    flipCard(card);
+                                }, (index + 1) * 5000);
+                            });
+                        });
+                    </script>
+
+                </div>
+            </div>
+        </div>
+    </div> -->
+        <div class="row  background_fade">
+            <style>
+                .card-container {
+                    position: relative;
+                }
+
+                .card {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    transform-style: preserve-3d;
+                    transition: transform 0.5s ease;
+                }
+
+                .card-face {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    backface-visibility: hidden;
+                }
+
+                .card-back {
+                    transform: rotateY(180deg);
+                }
+
+                .flipped {
+                    transform: rotateY(180deg);
+                }
+
+                .identity-img {
+
+                    height: 265px;
+                    margin: 1px 0px;
+                }
+
+                .mission-img {
+                    height: 265px;
+                    margin: 1px;
+                }
+            </style>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    const cards = document.querySelectorAll('.card');
+                    function flipCard(card) {
+                        card.classList.toggle('flipped');
+                    }
+                    cards.forEach((card, index) => {
+                        setTimeout(() => {
+                            flipCard(card);
+                        }, (index + 1) * 5000);
+                    });
+                });
+            </script>
+            <div class="col-12  mb-5 whyus" style="margin-top: 150px;">
+                <h1 class="text-white text-center m-auto heading_res" style="font-size:3.5vw;">
+                    Why <span style="color: #0075C5;
+        -webkit-text-stroke-width: 0.7px; ">Choose </span>Us?
+                </h1>
+                <p class="b"></p>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 mb-4 " style="display: flex;justify-content: center;">
+                <div class="card " style="width: 24rem; height: 21rem;" id="flip-card">
+                    <div class="card-face card-front">
+                        <div class="glow"></div>
+                        <img style="width: 24rem;height: 21rem;" src="img/home_card_1.jfif" alt="" />
+                    </div>
+                    <div class="  card-face card-back">
+                        <div class="bks p-3" style="height: 100%;">
+                            <span style="
+                    font-size: 59px;
+    color: white;
+    filter: drop-shadow(-26px -1px 17px #45005e);"><i class="fa-solid fa-hand-holding-dollar"></i></span>
+                            <h1 class="" style="font-size: 22px;color: #0075C5;">Our Mission</h1>
+                            <p class="text-white-100" style="font-size: 16px; margin: 3px;text-align: justify;">
+                                Months of
+                                meticulous planning, development, optimization, and rigorous testing go into each
+                                solution
+                                we craft. At Soven Developer, we perpetually strive for greatness, never settling
+                                for
+                                merely
+                                good when excellence is attainable.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 mb-4" style="display: flex;justify-content: center;">
+                <div class="card " style="width: 24rem; height: 21rem;" id="flip-card">
+                    <div class="card-face card-front">
+                        <div class="glow"></div>
+                        <img style="width: 24rem;height: 21rem;" src="img/home_card_2.avif" alt="" />
+                    </div>
+                    <div class="  card-face card-back">
+                        <div class="bks p-3" style="height: 100%;">
+                            <span style="
+                        font-size: 59px;
+        color: white;
+        filter: drop-shadow(-26px -1px 17px #45005e);"><i class="fa-solid fa-shield-halved"></i></i></span>
+                            <h1 class="" style="font-size: 22px;color: #0075C5;"> Our Values</h1>
+                            <p class="text-white-100" style="font-size: 16px; margin: 3px;text-align: justify; ">
+                                Customer satisfaction is our unwavering promise and top priority. We deeply value our
+                                clients and go the extra mile to ensure their contentment.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 mb-4 " style="display: flex;justify-content: center;">
+                <div class="card " style="width: 24rem; height: 21rem;" id="flip-card">
+                    <div class="card-face card-front">
+                        <div class="glow"></div>
+                        <img style="width: 24rem;height: 21rem;" src="img/home_card_3.avif" alt="" />
+                    </div>
+                    <div class="  card-face card-back">
+                        <div class="bks p-3" style="height: 100%;">
+                            <span style="
+                    font-size: 59px;
+    color: white;
+    filter: drop-shadow(-26px -1px 17px #45005e);"><i class="fa-solid fa-lightbulb"></i></span>
+                            <h1 class="" style="font-size: 22px;color: #0075C5;"> Our Identity</h1>
+                            <p class="text-white-100" style="font-size: 16px; margin: 3px;text-align: justify; ">
+                                We are crafting a people-centric company filled with talented, passionate individuals
+                                who revel in their work every single day.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- <div class="col-12 col-sm-12 col-md-6 col-lg-4 mb-4 ">
+                <div class="card" id="flip-card">
+                    <div class="card-face card-front">
+                        <div class="glow"></div>
+                    </div>
+                    <img height="265px" src="img/home_card_1.jfif" alt="" />
+                    <div class="card-face card-back">
+                        <div class="bks p-3" style="height: 100%;">
+                            <span style="
+                        font-size: 59px;
+        color: white;
+        filter: drop-shadow(-26px -1px 17px #45005e);"><i class="fa-solid fa-hand-holding-dollar"></i></span>
+                            <h1 class="" style="font-size: 22px;">Our Mission</h1>
+                            <p class="text-white-100" style="font-size: 16px; margin: 3px;text-align: justify;">
+                                Months of
+                                meticulous planning, development, optimization, and rigorous testing go into each
+                                solution
+                                we craft. At Soven Developer, we perpetually strive for greatness, never settling
+                                for
+                                merely
+                                good when excellence is attainable.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+        </div>
+
+        <br>
+        <div class="header_button">
+            <button class="custom_button" style="border: #0075C5 solid 1px; width:200px">How we help you?</button>
+        </div>
+        <div id="sec3" style="margin-top: 100px;">
+            <div class="container">
+                <div class="row row_edit justify-content-center" style="text-align: left;">
+                    <div class="col-12 col-md-6 section_content" style="margin-top: 0px;">
+                        <section class="container">
+                            <section class="row" id="section_2" style="border-radius:25px;padding: 10px;">
+                                <section class="col-12">
+                                    <h1 class="" style="font-size: 22px;">Soven Developer: Elevating Your Business</h1>
+                                    <p class="text-white-50" style="font-size: 16px; margin: 3px;text-align: justify;">
+                                        We are committed to delivering valuable content and fostering enduring business
+                                        relationships that satisfy our clients. Our primary aim is to propel our clients
+                                        towards greater heights, fostering revenue generation, and offering the best
+                                        solutions at affordable pricing.</p>
+
+                                </section>
+
+                                <section class="col-12">
+                                    <h1 class="" style="font-size: 22px;margin-top: 15px;">Not Just Another Development
+                                        Company</h1>
+                                    <p class="text-white-50" style="font-size: 16px; margin: 3px;text-align: justify;">
+                                        We are experienced web designers and developers offering unparalleled quality
+                                        and groundbreaking innovation worldwide. Our services encompass a comprehensive
+                                        range of web design and development solutions.</p>
+                                </section>
+                                <section class="col-12">
+                                    <h1 class="" style="font-size: 22px;margin-top: 15px;">Our Approach: Transparent
+                                        Collaboration</h1>
+                                    <p class="text-white-50" style="font-size: 16px; margin: 3px;text-align: justify;">
+                                        Once we've established a partnership, our collaborative journey begins with
+                                        creating a detailed technical briefing tailored for all, regardless of technical
+                                        expertise. This briefing breaks down the project into individual features,
+                                        presented in the simplest language possible.</p>
+                                </section>
+                                <section class="col-12">
+                                    <h1 class="" style="font-size: 22px;margin-top: 15px;">Project Feature Breakdown
+                                    </h1>
+                                    <p class="text-white-50" style="font-size: 16px; margin: 3px;text-align: justify;">
+                                        Each feature is meticulously outlined, specifying the estimated time for
+                                        completion, the technologies or languages involved, the number of team members
+                                        required, and associated costs. If budget constraints come into play, we
+                                        transparently offer alternatives aligned with your resources.</p>
+                                </section>
+                            </section>
+                        </section>
+                    </div>
+                    <div class="col-12 col-md-6 d-flex align-items-start justify-content-center">
+                        <img class="hide-on-mobile"
+                            src="https://i.pinimg.com/originals/a6/65/46/a665463e60ef772c82286e4ee6a15353.gif" style="
+                            height: auto;
+                            width: 100%;
+                        ">
+                    </div>
+                </div>
+            </div>
+            <div class="container" style="margin-top:100px">
+                <div class="row justify-content-center">
+
+                    <div class="col-12 col-md-6">
+                        <img src="https://i.pinimg.com/originals/cd/8f/36/cd8f36e9c0f1c9d59997bedb3c6ceab9.gif"
+                            style="width: auto;height: auto;">
+                    </div>
+                    <div class="col-12 col-md-6" style="margin-top: 0px;">
+                        <section class="container">
+                            <section class="row" id="section_2"
+                                style="border-radius:25px;padding: 10px;text-align: left;">
+                                <section class="col-12">
+                                    <h1 class="" style="font-size: 22px;">Transparency in Choices</h1>
+                                    <p class="text-white-50" style="font-size: 16px; margin: 3px;text-align: justify;">
+                                        For instance, if the budget is limited, and a web-based platform is the goal, we
+                                        might suggest leveraging platforms like WordPress or non-code solutions. We
+                                        thoroughly explain the rationale behind these suggestions and also present
+                                        alternative technologies, elucidating why they might not serve the project's
+                                        objectives.</p>
+                                </section>
+
+                                <section class="col-12">
+                                    <h1 class="" style="font-size: 22px;margin-top: 15px;">API Selection and
+                                        Transparency</h1>
+                                    <p class="text-white-50" style="font-size: 16px; margin: 3px;text-align: justify;">
+                                        When third-party APIs are necessary, we disclose their costs upfront,
+                                        maintaining our commitment to transparency. Moreover, we explore alternative
+                                        APIs available in the market and evaluate the feasibility of developing custom
+                                        solutions from scratch.</p>
+                                </section>
+                                <section class="col-12">
+                                    <h1 class="" style="font-size: 22px;margin-top: 15px;">Our Transparent Guidance</h1>
+                                    <p class="text-white-50" style="font-size: 16px; margin: 3px;text-align: justify;">
+                                        We believe in arming you with comprehensive knowledge to make informed
+                                        decisions. Our technical briefings serve as roadmaps, guiding you through each
+                                        step of the project, ensuring clarity, and aligning every choice with your
+                                        project's goals and budget.</p>
+                                    <section class="col-12">
+                                    </section>
+                                    <h1 class="" style="font-size: 22px;margin-top: 15px;">Example Scenario</h1>
+                                    <p class="text-white-50" style="font-size: 16px; margin: 3px;text-align: justify;">
+                                        Let's envision a scenario where you, as a small business owner, want to create
+                                        an online marketplace with limited resources. Upon partnering with Soven
+                                        Developer, we kickstart our collaboration by preparing a comprehensive technical
+                                        briefing designed for easy comprehension, even for non-technical stakeholders
+                                        within your team.</p>
+                                </section>
+                            </section>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+        </div>
+        <br><br>
+
+
+        <div class="header_button">
+            <a href="contact.html" class="btn mt-3 text-white"
+                style="border: #0075C5 solid 2px;border-radius: 15px;">Contact Us Today!</a>
+        </div>
+
+
+        <footer>
+            <div class="container">
+                <div class="row mt-4 justify-content-md-between">
+                    <div class="col-sm-12 col-md-6 mb-4">
+                        <div>
+                            <img src="img/logo.png" class="img-fluid" width="57" alt="">
+                        </div>
+                        <h5 class="mt-2 text-white">
+                            Soven Developer </h5>
+                        <p style="font-size: 13px;text-align: justify;" class="text-white-50">Sovendeveloper is a
+                            versatile company specializing in website
+                            development, app development, and software design. With their expertise in creating
+                            innovative and user-centric solutions, they deliver high-quality products tailored to meet
+                            client's specific needs.</p>
+                    </div>
+                    <div class="col-sm-12 col-md-4 mb-4">
+                        <!-- Social media icons -->
+                        <div class="d-flex justify-content-center">
+                            <a href="https://m.facebook.com/sovendeveloper" class="mx-1">
+                                <svg class="anchor-link" xmlns="http://www.w3.org/2000/svg" width="35" height="35"
+                                    fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                    <path
+                                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                                </svg>
+                            </a>
+                            <a href="https://twitter.com/DeveloperSoven" class=" mx-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                                    class="bi bi-twitter" viewBox="0 0 16 16">
+                                    <path
+                                        d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15" />
+                                </svg>
+                            </a>
+                            <a href="https://www.instagram.com/sovendeveloper?igsh=Z2hzc3dmOTFzYjUy" class=" mx-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                                    class="bi bi-instagram" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/company/soven-developer/" class=" mx-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                                    class="bi bi-linkedin" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401m-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="https://youtube.com/@sovendeveloper3909?si=Rd0I_B_fa8UnwS8s" class=" mx-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="35" height="35"
+                                    viewBox="0 0 32 24" id="youtube">
+                                    <path
+                                        d="M25 0H7C3.14 0 0 3.14 0 7v10c0 3.86 3.14 7 7 7h18c3.86 0 7-3.14 7-7V7c0-3.86-3.14-7-7-7zm5 17c0 2.757-2.243 5-5 5H7c-2.757 0-5-2.243-5-5V7c0-2.757 2.243-5 5-5h18c2.757 0 5 2.243 5 5v10z">
+                                    </path>
+                                    <path
+                                        d="m21.406 11.086-9-4A1 1 0 0 0 11 8v8a.999.999 0 0 0 1.406.914l9-4a1.001 1.001 0 0 0 0-1.828zM13 14.461V9.539L18.538 12 13 14.461z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div
+                            class="d-flex flex-column justify-content-center align-items-center contact-us-info  nav_edit_home">
+                            <a href="" class="contact">suraj@sovendeveloper</a>
+                            <a href="" class="contact">paulbrown@sovendeveloper</a>
+                            <a href="tel:+44 (0)744 8006087" class="contact">+44 (0)744 8006087</a>
+                            <a href="" class="contact"> 6, St Paul’s Road, Twickenham,</a>
+                            <a href="" class="contact"> London, TW18 3HH</a>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-center py-4 text-white" style="font-size: 16px; border-top: #0075C5 2px solid;">
+                    sovendeveloper © 2023-24
+                </p>
+            </div>
+        </footer>
+
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js'></script>
+        <script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
+        <script src="./script.js"></script>
+    </section>
+</body>
+
+</html>
