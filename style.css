@@ -1162,9 +1162,8 @@ h2 {
 
     background-color: transparent;
     color: white;
-    filter: drop-shadow(4px 5px 9px white);
     border: unset;
-    font-size: 42px;
+    font-size: 32px;
     margin-top: -27px;
 }
 
